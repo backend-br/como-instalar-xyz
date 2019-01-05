@@ -49,7 +49,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 # Editores de texto, IDEs e etc
 
 | Nome  | Linux | MacOS | Windows | FreeBSD
-| --- | --- | --- | --- | --- |
+| VSCode | [link]| ./tutoriais/vscode/linux/README.md | --- | --- |
 
 # Outros
 
