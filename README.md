@@ -12,21 +12,21 @@ Só pesquisar no repositório pelo que precisa ou dar uma olhada no sumário aba
 
 Você sabe como instalar algo, ou viu algum tutorial que precisa de umas correções? Só fazer um fork!
 
-A estrutura de pastas começa sendo separada por sistema operacional, seguido pela linguagem/projeto. 
+A estrutura de pastas começa sendo separada por linguagem/projeto e depois pelo sistema. 
 
 ```
+.
 ├── LICENSE
-├── linux
-│   ├── php
-│   │   └── README.md
-│   └── README.md
 ├── README.md
-└── windows
-    └── README.md
+└── tutoriais
+    └── php
+        ├── linux.md
+        ├── README.md
+        └── windows.md
+
 ```
 
-Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar um arquivo `README.md`!
-Se você quiser fornecer algum arquivo `.sh` para ajudar a instalar, pode colocar junto com o `README.md`.
+Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar um arquivo do sistema operacional!
 
 ---
 
@@ -39,6 +39,6 @@ Se você quiser fornecer algum arquivo `.sh` para ajudar a instalar, pode coloca
 # Editores de texto, IDEs e etc
 
 
-| Nome  | Linux | Windows | FreeBSD
-| --- | --- | --- | --- |
-| PHP | [tutorial](linux/php/README.md) | Não tem | Não tem |
+| Nome  | Linux | MacOS | Windows | FreeBSD
+| --- | --- | --- | --- | --- |
+| PHP | [tutorial](tutoriais/php/linux.md) | Não tem | Não tem | Não tem |
