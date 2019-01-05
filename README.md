@@ -32,13 +32,23 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 
 # Sumário
 
+- [Linguagens](#linguagens)
 - [Editores de texto, IDEs e etc](#editores-de-texto-ides-e-etc)
-- [Linguagens](#)
-- [Outros](#)
+- [Outros](#outros)
 
-# Editores de texto, IDEs e etc
+---
 
+# Linguagens
 
 | Nome  | Linux | MacOS | Windows | FreeBSD
 | --- | --- | --- | --- | --- |
-| PHP | [tutorial](tutoriais/php/linux.md) | Não tem | Não tem | Não tem |
+
+# Editores de texto, IDEs e etc
+
+| Nome  | Linux | MacOS | Windows | FreeBSD
+| --- | --- | --- | --- | --- |
+
+# Outros
+
+| Nome  | Linux | MacOS | Windows | FreeBSD
+| --- | --- | --- | --- | --- |
