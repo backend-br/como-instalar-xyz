@@ -8,6 +8,8 @@ Repositório com vários tutoriais para instalar várias coisas em vários siste
 
 Só pesquisar no repositório pelo que precisa ou dar uma olhada no sumário abaixo!
 
+Tá sentindo falta de algum tutorial? Abra uma issue!
+
 ## Como contribuir?
 
 Você sabe como instalar algo, ou viu algum tutorial que precisa de umas correções? Só fazer um fork!
