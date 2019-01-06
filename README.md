@@ -56,4 +56,4 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 
 | Nome  | Linux | MacOS | Windows | FreeBS
 | --- | --- | --- | --- | --- |
-| Docker | [Arch Linux](./tutoriais/docker/archlinux.md) | Não tem | Não tem | Não tem |
+| Docker | [link](./tutoriais/docker/linux.md) | Não tem | Não tem | Não tem |
