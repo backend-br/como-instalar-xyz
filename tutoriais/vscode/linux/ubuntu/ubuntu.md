@@ -5,7 +5,9 @@ Para instalar o VSCode no ubuntu você pode baixar o arquivo diretamente do [lin
 
 Ao terminar de baixar você pode executar diretamente clicando duas vezes ou executando o comando:
 
+```code
 sudo dpkg -i diretorio.dpkg
+```
 
 Logo em seguida você terá o VSCode instalado em sua máquina.
 
