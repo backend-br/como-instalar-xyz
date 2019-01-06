@@ -63,3 +63,4 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | Nome  | Linux | MacOS | Windows | FreeBS
 | --- | --- | --- | --- | --- |
 | Docker | [link](./tutoriais/docker/README.md) | Não tem | Não tem | Não tem |
+| Apache | [link](./tutoriais/apache/linux/ubuntu.md) | Não tem | Não tem | Não tem |
