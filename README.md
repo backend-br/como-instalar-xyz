@@ -45,6 +45,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | Nome  | Linux | MacOS | Windows | FreeBSD
 | --- | --- | --- | --- | --- |
 | NodeJS | [link](./tutoriais/nodejs/linux.md) | Não tem | Não tem | Não tem |
+| Java | [link](./tutoriais/java/linux/linux.md)| Não tem | Não tem | Não tem|
 
 # Editores de texto, IDEs e etc
 
@@ -53,6 +54,6 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 
 # Outros
 
-| Nome  | Linux | MacOS | Windows | FreeBSD
+| Nome  | Linux | MacOS | Windows | FreeBS
 | --- | --- | --- | --- | --- |
 | Docker | [Arch Linux](./tutoriais/docker/archlinux.md) | Não tem | Não tem | Não tem |
