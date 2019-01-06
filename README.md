@@ -12,7 +12,7 @@ Tá sentindo falta de algum tutorial? Abra uma issue!
 
 ## Como contribuir?
 
-Você sabe como instalar algo, ou viu algum tutorial que precisa de umas correções? Só fazer um fork!
+Você sabe como instalar algo, ou viu algum tutorial que precisa de umas correções? Só abrir uma issue, dizendo que você vai escrever certo tutorial - assim outra pessoa não corre o risco de fazer o mesmo que você - e fazer um fork!
 
 A estrutura de pastas começa sendo separada por linguagem/projeto e depois pelo sistema.
 
