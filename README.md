@@ -14,7 +14,7 @@ Tá sentindo falta de algum tutorial? Abra uma issue!
 
 Você sabe como instalar algo, ou viu algum tutorial que precisa de umas correções? Só fazer um fork!
 
-A estrutura de pastas começa sendo separada por linguagem/projeto e depois pelo sistema. 
+A estrutura de pastas começa sendo separada por linguagem/projeto e depois pelo sistema.
 
 ```
 .
@@ -54,5 +54,6 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 
 # Outros
 
-| Nome  | Linux | MacOS | Windows | FreeBSD
+| Nome  | Linux | MacOS | Windows | FreeBS
 | --- | --- | --- | --- | --- |
+| Docker | [Arch Linux](./tutoriais/docker/archlinux.md) | Não tem | Não tem | Não tem |
