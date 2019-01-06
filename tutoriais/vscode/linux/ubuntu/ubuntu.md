@@ -1,6 +1,7 @@
 # VSCode
 
-Para instalar o VSCode no ubuntu você pode baixar o arquivo diretamente do [site] (https://code.visualstudio.com/Download).
+# Instalando via DPKG
+Para instalar o VSCode no ubuntu você pode baixar o arquivo diretamente do [link](https://code.visualstudio.com/Download)
 
 Ao terminar de baixar você pode executar diretamente clicando duas vezes ou executando o comando:
 
