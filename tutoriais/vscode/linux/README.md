@@ -1,3 +1,3 @@
 # VSCode
 
-- [Linux - Ubuntu](./linux/ubuntu/ubuntu.md)
+- [Linux - Ubuntu](./ubuntu/ubuntu.md)
