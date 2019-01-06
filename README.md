@@ -47,9 +47,8 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | NodeJS | [link](./tutoriais/nodejs/linux.md) | Não tem | Não tem | Não tem |
 
 # Editores de texto, IDEs e etc
-
 | Nome  | Linux | MacOS | Windows | FreeBSD
-| VSCode | [link](./tutoriais/vscode/linux/README.md) | --- | --- | --- |
+| VSCode | [link](./tutoriais/vscode/linux/README.md) | --- | --- |
 
 # Outros
 
