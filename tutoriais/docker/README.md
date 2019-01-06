@@ -1,4 +1,4 @@
 # Docker
 
-- [Linux](./linux.md)
-- [Arch Linux](./archlinux.md)
+- [Arch Linux](./linux/archlinux.md)
+- [Ubuntu](./linux/ubuntu.md)

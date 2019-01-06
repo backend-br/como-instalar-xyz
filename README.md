@@ -16,6 +16,10 @@ Você sabe como instalar algo, ou viu algum tutorial que precisa de umas correç
 
 A estrutura de pastas começa sendo separada por linguagem/projeto e depois pelo sistema.
 
+Caso o tutorial diferencie de versão pra versão, como Debian para Arch no Linux(devido a coisas como o gerenciador de pacotes, etc), crie uma pasta com o nome base do sistema(`windows`, `linux`, `macOS`) e dentro dela um arquivo com o nome da versão que você quer criar um tutorial, ex: `tutoriais/docker/linux/debian.md`. 
+
+Assim que você criar um tutorial, só precisa indicar no `README.md` do projeto, um link pro seu tutorial, assim mantemos um índice completo e fácil de usar
+
 ```
 .
 ├── LICENSE
@@ -44,8 +48,8 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 
 | Nome  | Linux | MacOS | Windows | FreeBSD
 | --- | --- | --- | --- | --- |
-| NodeJS | [link](./tutoriais/nodejs/linux.md) | Não tem | Não tem | Não tem |
-| Java | [link](./tutoriais/java/linux/linux.md)| Não tem | Não tem | Não tem|
+| NodeJS | [link](./tutoriais/nodejs/linux.md) | [link](./tutoriais/nodejs/mac.md) | Não tem | Não tem |
+| Java | [link](./tutoriais/java/linux/ubuntu.md)| Não tem | Não tem | Não tem |
 
 # Editores de texto, IDEs e etc
 
@@ -56,4 +60,4 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 
 | Nome  | Linux | MacOS | Windows | FreeBS
 | --- | --- | --- | --- | --- |
-| Docker | [link](./tutoriais/docker/linux.md) | Não tem | Não tem | Não tem |
+| Docker | [link](./tutoriais/docker/README.md) | Não tem | Não tem | Não tem |

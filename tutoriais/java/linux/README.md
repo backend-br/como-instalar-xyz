@@ -1,3 +1,0 @@
-# Java
-
-- [Linux](./linux.md)
