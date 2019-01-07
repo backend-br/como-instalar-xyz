@@ -1,4 +1,4 @@
 # go
 
-- [linux](.linux/linux.md)
+- [linux](linux)
 
