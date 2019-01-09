@@ -30,4 +30,4 @@ nvm install latest (32 ou 64)
 
 `64` - Windows 64;
 
-Pronto! NodeJS instalado com sucesso! Execute `node --version` pra ver a versão instalada. Por padrão, o NVM sempre instala a última versão disponível.
+Pronto! NodeJS instalado com sucesso! Execute `node --version` pra ver a versão instalada.
