@@ -1,6 +1,6 @@
 # NodeJS
 
-A melhor forma de instalar o NodeJSé utilizando o [nvm](https://github.com/creationix/nvm), pois assim consegue ter um controle maior sobre as versões do Node.
+A melhor forma de instalar o NodeJS é utilizando o [nvm](https://github.com/creationix/nvm), pois assim consegue ter um controle maior sobre as versões do Node.
 
 ### NVM
 
