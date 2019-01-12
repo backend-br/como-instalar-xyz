@@ -53,6 +53,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | R | [link](.tutoriais/R/linux/ubuntu.md)| Não tem | Não tem | Não tem|
 | Ruby | [link](./tutoriais/ruby/linux.md)| Não tem | Não tem | Não tem|
 | Go | [link](./tutoriais/go/linux.md) | Não tem | Não tem | Não tem|
+| PHP | [link](./tutoriais/php/linux/ubuntu.md) | Não tem | Não tem | Não tem|
 
 # Editores de texto, IDEs e etc
 
