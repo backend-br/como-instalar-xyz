@@ -58,6 +58,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | Nome  | Linux | MacOS | Windows | FreeBSD
 | --- | --- | --- | --- | --- |
 | VSCode | [link](./tutoriais/vscode/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| Eclipse | [link](./tutoriais/eclipse/linux/README.md) | Não tem | Não tem | Não tem |
 
 # Outros
 
