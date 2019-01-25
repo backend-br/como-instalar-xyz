@@ -50,7 +50,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | --- | --- | --- | --- | --- |
 | NodeJS | [link](./tutoriais/nodejs/linux.md) | [link](./tutoriais/nodejs/mac.md) | [link](./tutoriais/nodejs/windows.md) | Não tem |
 | Java | [link](./tutoriais/java/linux/ubuntu.md)| Não tem | Não tem | Não tem |
-| R | [link](.tutoriais/R/linux/ubuntu.md)| Não tem | Não tem | Não tem|
+| R | [link](./tutoriais/R/linux/ubuntu.md)| Não tem | Não tem | Não tem|
 | Ruby | [link](./tutoriais/ruby/linux.md)| Não tem | Não tem | Não tem|
 | Go | [link](./tutoriais/go/linux.md) | Não tem | Não tem | Não tem|
 | PHP | [link](./tutoriais/php/linux/ubuntu.md) | Não tem | Não tem | Não tem|
