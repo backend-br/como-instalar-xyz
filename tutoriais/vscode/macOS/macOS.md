@@ -17,7 +17,7 @@ Visite a página de download através do link: https://code.visualstudio.com/dow
 * Clique no botão correspondente ao macOS para iniciar o download do arquivo `.zip`. Seu navegador será redirecionado para a documentação do editor e então o download será iniciado. 
 
 * Após o término do download, utilize o **Finder** para localizar o arquivo `VSCode-darwin-stable.zip`. Ele provavelmente está na sua pasta `Downloads.` 
-  * Se não estiver, utilize   ⎇ ⌘ L no Chrome ou `⌘ Y` no Safari para que o navegador mostre seus últimos downloads.
+  * Se não estiver, utilize `option command L  ` (⌥ ⌘ L) no Chrome ou `command Y`   (⌘ Y) no Safari para que o navegador mostre seus últimos downloads.
 
 ## Extraindo o arquivo baixado
 
@@ -26,7 +26,7 @@ Visite a página de download através do link: https://code.visualstudio.com/dow
 ## Instalando
 
 * O próximo passo é manualmente arrastar o arquivo extraído para a sua pasta Applications:
-  * Abra uma nova janela do **Finder** através do atalho `⌥ ⌘ N`
+  * Abra uma nova janela do **Finder** através do atalho `option command N`  (⌥ ⌘ N)
   * Na sidebar, clique em **Applications** para abrir a pasta
 
 * Pronto!, o **VS Code** já está instalado no seu Macintosh e disponível para ser iniciado a partir do **Launchpad**.
