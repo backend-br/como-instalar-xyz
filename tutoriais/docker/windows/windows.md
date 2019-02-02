@@ -5,6 +5,7 @@
 - Windows 10 64bit: Versões Pro, Enterprise ou Education (1607 Anniversary Update, Build 14393 ou maior).
 - Virtualização habilitada no BIOS. Geralmente está ativa por padrão mas verifique está opção. A configuração pode variar de acordo com o fabricante da Placa Mãe portanto consulte no manual como ativar.
 - no minímo 4GB of RAM.
+- A feature do Hyper-V habilitada.
 
 Instalar o Docker no Windows 10 é bem simples, primeiro efetue o download do **Docker Installer** através desse link [aqui](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe).
 
