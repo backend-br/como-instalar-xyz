@@ -59,14 +59,15 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 
 | Nome  | Linux | MacOS | Windows | FreeBSD
 | --- | --- | --- | --- | --- |
-| VSCode | [link](./tutoriais/vscode/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| VSCode | [link](./tutoriais/vscode/linux/ubuntu.md) | [link](./tutoriais/vscode/macOS/macOS.md) | Não tem | Não tem |
 | Eclipse | [link](./tutoriais/eclipse/linux/README.md) | Não tem | Não tem | Não tem |
 
 # Outros
 
 | Nome  | Linux | MacOS | Windows | FreeBS
 | --- | --- | --- | --- | --- |
-| Docker | [link](./tutoriais/docker/README.md) | Não tem | Não tem | Não tem |
+| Docker | [link](./tutoriais/docker/README.md) | Não tem | [link](./tutoriais/docker/windows/windows.md) | Não tem |
 | Apache | [link](./tutoriais/apache/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | NginX | [link](./tutoriais/nginx/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| Mysql | [link](./tutoriais/mysql/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| MySQL | [link](./tutoriais/mysql/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| Git | [link](./tutoriais/git/linux/ubuntu.md) | Não tem | Não tem | Não tem |
