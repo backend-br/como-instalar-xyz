@@ -68,5 +68,6 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | --- | --- | --- | --- | --- |
 | Docker | [link](./tutoriais/docker/README.md) | Não tem | [link](./tutoriais/docker/windows/windows.md) | Não tem |
 | Apache | [link](./tutoriais/apache/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| NginX | [link](./tutoriais/nginx/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | MySQL | [link](./tutoriais/mysql/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | Git | [link](./tutoriais/git/linux/ubuntu.md) | Não tem | Não tem | Não tem |
