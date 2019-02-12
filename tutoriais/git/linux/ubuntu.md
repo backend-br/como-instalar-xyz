@@ -30,6 +30,10 @@ Com esses comandos, a instalação do Git e uma configuração básica de identi
 
 *Devido a ter sido instalado por meio de PPA, seu Git sempre será atualizado junto com as demais atualizações do sistema, de maneira muito cômoda mantendo-o sempre na versão mais atual :)
 
+Opcionalmente você também pode instalar o [tig](https://jonas.github.io/tig/doc/manual.html). Uma ferramenta de linha de comando em modo gráfico para navegar pelo histórico de commits.
+```shell
+sudo apt-get install -y tig
+```
 
 Referências:
 https://git-scm.com/download/linux
