@@ -32,3 +32,9 @@ Agora temos que mover o instalador para ficar disponível em todo o sistema:
 # assumindo que você esteja em ~
 sudo mv composer.phar /usr/local/bin/composer
 ```
+
+## Usando o lazy-installer
+
+Se você não quer ficar se preocupando toda vez com o hash do arquivo, você pode instalar o composer de forma automatizada com um shell script provido por eles mesmos. O que esse script faz é buscar na web o último hash válido do instalador do composer e, se tudo estiver certo, realiza a instalação pra você.
+
+Uma cópia do script [se encontra aqui](composer_autoinstaller.sh), com algumas modificações. Código comentado.
