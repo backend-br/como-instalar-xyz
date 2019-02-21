@@ -54,6 +54,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | Ruby | [link](./tutoriais/ruby/linux.md)| Não tem | Não tem | Não tem|
 | Go | [link](./tutoriais/go/linux.md) | Não tem | Não tem | Não tem|
 | PHP | [link](./tutoriais/php/linux/ubuntu.md) | Não tem | Não tem | Não tem|
+| kotlin | [link](./tutoriais/kotlin/linux/ubuntu.md) | Não tem | Não tem | Não tem|
 
 # Editores de texto, IDEs e etc
 
