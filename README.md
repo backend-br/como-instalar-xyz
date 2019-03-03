@@ -76,3 +76,4 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | Pyenv | [link](./tutoriais/pyenv/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | Composer | [link](./tutoriais/composer/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | PostgreSQL | [link](./tutoriais/postgresql/linux.md) | Não tem | Não tem | Não tem |
+| MongoDB | [link](./tutoriais/mongodb/linux/ubuntu.md) | Não tem | Não tem | Não tem |
