@@ -1,9 +1,7 @@
 # Git
-
 Uma maneira prática de realizar a instalação do gerenciador de repositórios Git é por meio dos repositórios do Ubuntu. Em um terminal, digite os seguintes comandos. Os comandos irão solicitar privilégios de administrador e sua senha.
 
 ```shell
-
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get update
 ```
