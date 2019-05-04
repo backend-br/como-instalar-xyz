@@ -54,7 +54,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | Ruby | [link](./tutoriais/ruby/linux.md)| Não tem | [link](./tutoriais/ruby/windows.md) | Não tem|
 | Go | [link](./tutoriais/go/linux.md) | Não tem | Não tem | Não tem|
 | PHP | [link](./tutoriais/php/linux/ubuntu.md) | Não tem | Não tem | Não tem|
-| kotlin | [link](./tutoriais/kotlin/linux/ubuntu.md) | Não tem | Não tem | Não tem|
+| Kotlin | [link](./tutoriais/kotlin/linux/ubuntu.md) | Não tem | Não tem | Não tem|
 
 # Editores de texto, IDEs e etc
 
@@ -64,16 +64,26 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | Eclipse | [link](./tutoriais/eclipse/linux/README.md) | Não tem | Não tem | Não tem |
 | Sublime Text 3 | [link](./tutoriais/sublime/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 
+# Bancos de Dados
+
+| Nome  | Linux | MacOS | Windows | FreeBSD
+| --- | --- | --- | --- | --- |
+| MySQL | [link](./tutoriais/mysql/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| PostgreSQL | [link](./tutoriais/postgresql/linux.md) | Não tem | Não tem | Não tem |
+| MongoDB | [link](./tutoriais/mongodb/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+
+# Frameworks, bibliotecas & etc
+
+| Nome  | Linux | MacOS | Windows | FreeBS
+| --- | --- | --- | --- | --- |
+| Pyenv | [link](./tutoriais/pyenv/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| Composer | [link](./tutoriais/composer/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+
 # Outros
 
 | Nome  | Linux | MacOS | Windows | FreeBS
 | --- | --- | --- | --- | --- |
 | Docker | [link](./tutoriais/docker/README.md) | Não tem | [link](./tutoriais/docker/windows/windows.md) | Não tem |
 | Apache | [link](./tutoriais/apache/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| NginX | [link](./tutoriais/nginx/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| MySQL | [link](./tutoriais/mysql/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| Nginx | [link](./tutoriais/nginx/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | Git | [link](./tutoriais/git/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| Pyenv | [link](./tutoriais/pyenv/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| Composer | [link](./tutoriais/composer/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| PostgreSQL | [link](./tutoriais/postgresql/linux.md) | Não tem | Não tem | Não tem |
-| MongoDB | [link](./tutoriais/mongodb/linux/ubuntu.md) | Não tem | Não tem | Não tem |
