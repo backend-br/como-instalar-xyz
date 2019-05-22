@@ -78,6 +78,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | --- | --- | --- | --- | --- |
 | Pyenv | [link](./tutoriais/pyenv/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | Composer | [link](./tutoriais/composer/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| Laravel | [link](./tutoriais/laravel/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 
 # Outros
 
