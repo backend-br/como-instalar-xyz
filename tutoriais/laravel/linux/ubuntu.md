@@ -1,25 +1,25 @@
 # Tutorial de instalação do Laravel no Ubuntu 18.04
 
-## Sobre o laravel
+## Sobre o Laravel
 
 O [Laravel](https://laravel.com/docs/5.8) é uma Framework web contruído em PHP para criação de sites com o [Padrão MVC](https://pt.wikipedia.org/wiki/MVC).
 
-Nossa instalação será da Versão 5.8 que é a última até a criação deste tutorial
+Nossa instalação será da versão 5.8, que é a última até a criação deste tutorial.
 
-Para que o laravel funcione e preciso instalar o php e algumas libs adicionais, e também um banco de dados, pela faciliadade de uso e popularidade escolhi o mysql como banco.
+Para que o Laravel funcione é preciso instalar o PHP, algumas libs adicionais e um banco de dados (pela faciliadade de uso e popularidade escolhi o MySQL como banco).
 
-Não irei instalar o Apache para desenvolvimento podemos usar um comando do PHP que inicialza um servidor para nos :)
+Não irei instalar o Apache para desenvolvimento, pois o PHP contém um servidor basico já pronto para nos :)
 
 ## PHP
 
-Primeiro instalamos o php
+Primeiro instalamos o PHP.
 
 ```shell
 $ sudo apt update
 $ sudo apt install php -y
 ```
 
-Depois as libs adicionais que o laravel precisa
+Depois instalamos as libs adicionais, que o Laravel precisa.
 
 ```shell
 $ sudo apt install php-mbstring php-tokenizer php-xml php-json php-bcmath php-mysql -y
@@ -28,7 +28,7 @@ $ sudo apt install php-mbstring php-tokenizer php-xml php-json php-bcmath php-my
 
 ## Composer
 
-Composer e quem cuida de instalar e atualizar as dependencias do nosso projeto, tanto as do laravel quanto de pacotes que viermos a precisar no decorer de um projeto
+O Composer é quem cuida de instalar e atualizar as dependências do nosso projeto, tanto as do Laravel quanto de pacotes que viermos a precisar no decorer de um projeto.
 
 ```shell
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -37,17 +37,17 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 
-Depois de baixar vamos colocar o composer para ser  usado de forma global 
+Depois de baixar e instalar vamos colocar o Composer para ser usado de forma global.
 
 ```shell
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-## Agora sim vamos baixar o Laravel
+## Agora sim, vamos baixar o Laravel
 
-Escolha uma pasta de sua preferencia para baixar os arquivo, eu vou colocar na pasta pessoal do me Ubuntu
+Escolha uma pasta de sua preferência para baixar os arquivo, pode ser na pasta pessoal do seu Ubuntu, por exemplo.
 
-O último Parametro dessse comando é o nome do projeto que voce pode colocar o que achar melhor
+O último Parametro do comando abaixo é o nome do projeto que você pode colocar o que achar melhor. Eu estou usando o nome meu_primeiro_laravel.
 
 
 ```shell
@@ -55,43 +55,45 @@ cd ~
 composer create-project --prefer-dist laravel/laravel meu_primeiro_laravel
 ```
 
-Após a conclusão do donwload navegue na pasta e veja os arquivo baixados
+Após a conclusão do donwload navegue na pasta e execute o seguinte comando, se tudo deu certo ira aparece o versão do Laravel que acabamos usar.
 
 ```shell
 cd meu_primeiro_laravel
-ls -la
+php artisan --version
 ```
-Se conseguirmos visualiar pastas como app, storage, routes, database ... tudo deu certo
 
-Agora vamos iniciar o servidor para acessar o projeto via web
+Agora vamos iniciar o servidor para acessar o projeto via web.
 
 ```shell
 php artisan serve
 ```
 
-Esse comando mostra o link do projeto que no meu caso foi [http://localhost:8000](http://localhost:8000)
+Esse comando mostra o link do projeto que no meu caso foi [http://localhost:8000](http://localhost:8000).
 
 
-## Mais Recursos, MySQL e Node/Npm
+## Mais Recursos, MySQL e Node/NPM
 
-A instalação do Laravel já esta pronta, porém não esta comunicando-se com nenhum banco, isso em um projeto web não constuma acontecer, vamos instalar o Mysql para isso
+A instalação do Laravel já esta pronta, porém não esta comunicando-se com nenhum banco, isso em um projeto web não constuma acontecer, vamos instalar o Mysql.
 
-## MySql
+## MySQL
 
 ```shell
 sudo apt install mysql-server
+```
+
+O próximo comando é para configurar a senha root do mysql e outras configurações de segurança.
+Não estamos configurando a conexão do banco no Laravel, depois que você criar uma base de dados login e senha no MySQL você configura no arquivo .env na root do projeto sua conexão.
+
+
+```shell
 sudo mysql_secure_installation
 ```
 
-Esse segundo comando e para voce Configurar a senha root do mysql e outras configurações.
-Não estamos configurando a conexão do banco no laravel, depois que você criar o banco de login e senha no MySql você configura no arquivo .env na root do projeto.
-
-
 ## NPM
 
-Com o npm podemos compilar seu css e js com sass e Vue e/ou outras dependencias front end que queira, na documentação do laravel [https://laravel.com/docs/5.8/frontend](https://laravel.com/docs/5.8/frontend) você encrontra mais informações de como usar esses recursos.
+Com o Node/NPM podemos compilar nosso CSS, JS, SASS e Vue e/ou outras dependencias _Front-end_ que queira. Na documentação do Laravel [https://laravel.com/docs/5.8/frontend](https://laravel.com/docs/5.8/frontend) você encontra mais informações de como usar esses recursos.
 
-Mas Os comandos para instalção estão são estes
+Os comandos para instalação são estes.
 
 ```shell
 sudo apt install nodejs -y
@@ -107,4 +109,4 @@ npm -v
 
 ## Considerações finais
 
-Esta instalação deixa seu sistema com o Laravel funcionando. Para produção você ira instalar o apache e tambem existe o uso de docker, mas isso fica pra outro momento.
+Esta instalação deixa seu sistema com o Laravel funcionando. Para produção você ira instalar o Apache e também existe o uso de Docker, mas isso fica pra outro momento.
