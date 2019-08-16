@@ -1,7 +1,7 @@
 # Ruby
 
 As versões atuais do macOS possuem uma versão do Ruby pré-instalado.
-Porém, para utilizar outra versão é necessário instalar um gerenciador de versões (ex: rmv e rbenv)
+Porém, para utilizar outra versão é necessário instalar um gerenciador de versões (ex: rmv e rbenv).
 Além disso, a Apple avisou que em novas versões do sistema, muitas das ferramentas de desenvolvedores serão removidas.
 
 ## Requisitos
