@@ -2,4 +2,4 @@
 
 - [Ubuntu](./linux/ubuntu.md)
 
-- ´[Windows](./windows/windows.md)
+- [Windows](./windows/windows.md)

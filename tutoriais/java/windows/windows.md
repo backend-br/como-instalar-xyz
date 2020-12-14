@@ -22,12 +22,12 @@ Após a conclussão do download execute o instalador - basicamente clicar em nex
 
 3. Clique na parte inferior em **Variáveis de Ambiente** na parte de baixo **Variáveis do sistema** clique em **Novo..**.
 
-4. Em **Nome da variável** digite **JAVA_HOME**, em **Valor da variável** digite o diretório da instalação do JDK. Parecido com esse **C:\Program Files\Java\jdk-11.0.2** para finalizar clique em **ok** em todas janelas abertas.
+4. Em **Nome da variável** digite **JAVA_HOME**, em **Valor da variável** digite o diretório da instalação do JDK. Parecido com esse **C:\Program Files\Java\jdk-11.0.9** para finalizar clique em **ok** em todas janelas abertas.
 
 
 # Verificando a instalação
 
-Abra o CMD e digite: **java -version** se aparecer: **java version: 11.0.2**, a instalação e configuração da variável de ambiente foi feita corretamente.
+Abra o CMD e digite: **java -version** se aparecer: **java version: 11.0.9**, a instalação e configuração da variável de ambiente foi feita corretamente.
 
 
 
