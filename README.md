@@ -52,6 +52,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | Java | [link](./tutoriais/java/linux/ubuntu.md)| Não tem | [link](./tutoriais/java/windows/windows.md) | Não tem |
 | R | [link](./tutoriais/R/linux/ubuntu.md)| Não tem | Não tem | Não tem|
 | Ruby | [link](./tutoriais/ruby/linux.md)| [link](./tutoriais/ruby/macos.md) | [link](./tutoriais/ruby/windows.md) | Não tem|
+| Rust | [link](./tutoriais/rust/) | Não tem | Não tem | Não tem
 | Go | [link](./tutoriais/go/linux.md) | Não tem | Não tem | Não tem|
 | PHP | [link](./tutoriais/php/linux/ubuntu.md) | Não tem | Não tem | Não tem|
 | Kotlin | [link](./tutoriais/kotlin/linux/ubuntu.md) | Não tem | Não tem | Não tem|
