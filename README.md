@@ -82,6 +82,12 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 | Composer | [link](./tutoriais/composer/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | Laravel | [link](./tutoriais/laravel/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 
+# Gerenciadores de Pacotes
+
+| Nome  | Linux | MacOS | Windows | FreeBS
+| --- | --- | --- | --- | --- |
+| Chocolatey | Não tem | Não tem | [link](./tutoriais/chocolatey/windows/windows.md) | Não tem |
+
 # Outros
 
 | Nome  | Linux | MacOS | Windows | FreeBS

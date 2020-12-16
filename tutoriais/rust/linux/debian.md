@@ -1,4 +1,3 @@
-
 O `Rust` utiliza o `rustup` para compilar códigos feitos em `Rust`.
 
 Ele por enquanto ainda não existe no repositorio padrão do `Debian`, para isso vamos executar esse comando.
@@ -16,4 +15,4 @@ Para adicionar rode esse comando:
 export PATH=$PATH:~/.cargo/bin
 ```
 
-Pronto, o rust está instalado.
+### Pronto, o rust está instalado.

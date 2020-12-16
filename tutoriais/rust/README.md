@@ -1,4 +1,3 @@
-
 # Rust
 
 ## Uma linguagem empoderando todos a construir softwares confiáveis e eficientes.
