@@ -15,4 +15,4 @@ Para adicionar rode esse comando:
 export PATH=$PATH:~/.cargo/bin
 ```
 
-Pronto, o rust está instalado.
+### Pronto, o rust está instalado.
