@@ -76,7 +76,7 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 
 # Frameworks, bibliotecas & etc
 
-| Nome  | Linux | MacOS | Windows | FreeBS
+| Nome  | Linux | MacOS | Windows | FreeBSD
 | --- | --- | --- | --- | --- |
 | Pyenv | [link](./tutoriais/pyenv/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | Composer | [link](./tutoriais/composer/linux/ubuntu.md) | Não tem | Não tem | Não tem |
@@ -84,15 +84,15 @@ Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar
 
 # Gerenciadores de Pacotes
 
-| Nome  | Linux | MacOS | Windows | FreeBS
+| Nome  | Linux | MacOS | Windows | FreeBSD
 | --- | --- | --- | --- | --- |
 | Chocolatey | Não tem | Não tem | [link](./tutoriais/chocolatey/windows/windows.md) | Não tem |
 
 # Outros
 
-| Nome  | Linux | MacOS | Windows | FreeBS
+| Nome  | Linux | MacOS | Windows | FreeBSD
 | --- | --- | --- | --- | --- |
 | Docker | [link](./tutoriais/docker/README.md) | Não tem | [link](./tutoriais/docker/windows/windows.md) | Não tem |
 | Apache | [link](./tutoriais/apache/linux/ubuntu.md) | Não tem | Não tem | Não tem |
 | Nginx | [link](./tutoriais/nginx/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| Git | [link](./tutoriais/git/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| Git | [link](./tutoriais/git/linux/ubuntu.md) | Não tem | Não tem | [link](./tutoriais/git/freebsd/README.md) |
