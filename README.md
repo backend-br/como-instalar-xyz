@@ -1,98 +1,97 @@
+<!--suppress HtmlDeprecatedAttribute -->
+
 <p align="center">
   <img src="https://avatars3.githubusercontent.com/u/30732658?v=4&s=200.jpg" alt="BackEndBR" width="230" />
 </p>
 
+<div id='install'></div>
+
 # Como instalar XYZ
 
-Repositório com vários tutoriais para instalar várias coisas em vários sistemas operacionais. Precisa de ajuda pra instalar aquele compilador? Tá aqui!
+Repositório com vários tutoriais para instalar várias coisas em vários sistemas operacionais.
 
-Só pesquisar no repositório pelo que precisa ou dar uma olhada no sumário abaixo!
+## Tutoriais
 
-Tá sentindo falta de algum tutorial? Abra uma issue!
+* [Linguagens](#languages)
+* [Bancos de Dados](#databases)
+* [Gerenciadores de pacotes](#managers)
+* [Editores de texto, IDEs e etc](#ides)
+* [Frameworks, bibliotecas e etc](#frameworks)
+* [Outros](#others)
 
-## Como contribuir?
+<div id='languages'></div>
 
-Você sabe como instalar algo, ou viu algum tutorial que precisa de umas correções? Só abrir uma issue, dizendo que você vai escrever certo tutorial - assim outra pessoa não corre o risco de fazer o mesmo que você - e fazer um fork!
+### Linguagens
 
-A estrutura de pastas começa sendo separada por linguagem/projeto e depois pelo sistema.
+| Nome   | Linux                                            | MacOS                             | Windows                                     | FreeBSD |
+|--------|--------------------------------------------------|-----------------------------------|---------------------------------------------|---------|
+| R      | [link](./tutoriais/R/linux/ubuntu.md)            |                                   |                                             |         |
+| Go     | [link](./tutoriais/go/linux.md)                  |                                   |                                             |         |
+| PHP    | [link](./tutoriais/php/linux/ubuntu.md)          |                                   |                                             |         |
+| Ruby   | [link](./tutoriais/ruby/linux.md)                | [link](./tutoriais/ruby/macos.md) | [link](./tutoriais/ruby/windows.md)         |         |
+| Rust   | [link](./tutoriais/rust)                         |                                   |                                             |         |
+| Java   | [link](./tutoriais/java/linux/ubuntu.md)         |                                   | [link](./tutoriais/java/windows/windows.md) |         |
+| NodeJS | [link](./tutoriais/nodejs/linux.md)              | [link](./tutoriais/nodejs/mac.md) | [link](./tutoriais/nodejs/windows.md)       |         |
+| Kotlin | [link](./tutoriais/kotlin/linux/ubuntu.md)       |                                   |                                             |         |
+| Python | [link](./tutoriais/python/linux/python_linux.md) |                                   |                                             |         |
 
-Caso o tutorial diferencie de versão pra versão, como Debian para Arch no Linux(devido a coisas como o gerenciador de pacotes, etc), crie uma pasta com o nome base do sistema(`windows`, `linux`, `macOS`) e dentro dela um arquivo com o nome da versão que você quer criar um tutorial, ex: `tutoriais/docker/linux/debian.md`. 
+<div id='databases'></div>
 
-Assim que você criar um tutorial, só precisa indicar no `README.md` do projeto, um link pro seu tutorial, assim mantemos um índice completo e fácil de usar
+### Bancos de Dados
 
-```
-.
-├── LICENSE
-├── README.md
-└── tutoriais
-    └── php
-        ├── linux.md
-        ├── README.md
-        └── windows.md
+| Nome       | Linux                                       | MacOS | Windows | FreeBSD |
+|------------|---------------------------------------------|-------|---------|---------|
+| MySQL      | [link](./tutoriais/mysql/linux/ubuntu.md)   |       |         |         |
+| MongoDB    | [link](./tutoriais/mongodb/linux/ubuntu.md) |       |         |         |
+| PostgreSQL | [link](./tutoriais/postgresql/linux.md)     |       |         |         |
 
-```
+<div id='managers'></div>
 
-Se a pasta da linguagem/projeto não existir, é só criar e dentro dela colocar um arquivo do sistema operacional!
+### Gerenciadores de pacotes
 
----
+| Nome       | Linux | MacOS | Windows                                           | FreeBSD |
+|------------|-------|-------|---------------------------------------------------|---------|
+| Chocolatey |       |       | [link](./tutoriais/chocolatey/windows/windows.md) |         |
 
-# Sumário
+<div id='ides'></div>
 
-- [Linguagens](#linguagens)
-- [Editores de texto, IDEs e etc](#editores-de-texto-ides-e-etc)
-- [Outros](#outros)
+### Editores de texto, IDEs e etc
 
----
+| Nome         | Linux                                       | MacOS                                     | Windows                                       | FreeBSD |
+|--------------|---------------------------------------------|-------------------------------------------|-----------------------------------------------|---------|
+| VSCode       | [link](./tutoriais/vscode/README.md)        | [link](./tutoriais/vscode/macOS/macOS.md) | [link](./tutoriais/vscode/windows/windows.md) |         |
+| Eclipse      | [link](./tutoriais/eclipse/linux/README.md) |                                           |                                               |         |
+| Sublime Text | [link](./tutoriais/sublime/linux/ubuntu.md) |                                           |                                               |         |
 
-# Linguagens
+<div id='frameworks'></div>
 
-| Nome  | Linux | MacOS | Windows | FreeBSD
-| --- | --- | --- | --- | --- |
-| NodeJS | [link](./tutoriais/nodejs/linux.md) | [link](./tutoriais/nodejs/mac.md) | [link](./tutoriais/nodejs/windows.md) | Não tem |
-| Java | [link](./tutoriais/java/linux/ubuntu.md)| Não tem | [link](./tutoriais/java/windows/windows.md) | Não tem |
-| R | [link](./tutoriais/R/linux/ubuntu.md)| Não tem | Não tem | Não tem|
-| Ruby | [link](./tutoriais/ruby/linux.md)| [link](./tutoriais/ruby/macos.md) | [link](./tutoriais/ruby/windows.md) | Não tem|
-| Rust | [link](./tutoriais/rust/) | Não tem | Não tem | Não tem
-| Go | [link](./tutoriais/go/linux.md) | Não tem | Não tem | Não tem|
-| PHP | [link](./tutoriais/php/linux/ubuntu.md) | Não tem | Não tem | Não tem|
-| Kotlin | [link](./tutoriais/kotlin/linux/ubuntu.md) | Não tem | Não tem | Não tem|
-| Python | [link](./tutoriais/python/linux/python_linux.md) | Não tem | Não tem | Não tem|
+### Frameworks, bibliotecas e etc
 
-# Editores de texto, IDEs e etc
+| Nome     | Linux                                        | MacOS | Windows | FreeBSD |
+|----------|----------------------------------------------|-------|---------|---------|
+| Pyenv    | [link](./tutoriais/pyenv/linux/ubuntu.md)    |       |         |         |
+| Laravel  | [link](./tutoriais/laravel/linux/ubuntu.md)  |       |         |         |
+| Composer | [link](./tutoriais/composer/linux/ubuntu.md) |       |         |         |
 
-| Nome  | Linux | MacOS | Windows | FreeBSD
-| --- | --- | --- | --- | --- |
-| VSCode | [link](./tutoriais/vscode/README.md) | [link](./tutoriais/vscode/macOS/macOS.md) | [link](./tutoriais/vscode/windows/windows.md) | Não tem |
-| Eclipse | [link](./tutoriais/eclipse/linux/README.md) | Não tem | Não tem | Não tem |
-| Sublime Text 3 | [link](./tutoriais/sublime/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+<div id='others'></div>
 
-# Bancos de Dados
+### Outros
 
-| Nome  | Linux | MacOS | Windows | FreeBSD
-| --- | --- | --- | --- | --- |
-| MySQL | [link](./tutoriais/mysql/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| PostgreSQL | [link](./tutoriais/postgresql/linux.md) | Não tem | Não tem | Não tem |
-| MongoDB | [link](./tutoriais/mongodb/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+| Nome   | Linux                                      | MacOS | Windows                                       | FreeBSD                                   |
+|--------|--------------------------------------------|-------|-----------------------------------------------|-------------------------------------------|
+| Git    | [link](./tutoriais/git/linux/ubuntu.md)    |       |                                               | [link](./tutoriais/git/freebsd/README.md) |
+| Nginx  | [link](./tutoriais/nginx/linux/ubuntu.md)  |       |                                               |                                           |
+| Docker | [link](./tutoriais/docker/README.md)       |       | [link](./tutoriais/docker/windows/windows.md) |                                           |
+| Apache | [link](./tutoriais/apache/linux/ubuntu.md) |       |                                               |                                           |
 
-# Frameworks, bibliotecas & etc
+<div id='license'></div>
 
-| Nome  | Linux | MacOS | Windows | FreeBSD
-| --- | --- | --- | --- | --- |
-| Pyenv | [link](./tutoriais/pyenv/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| Composer | [link](./tutoriais/composer/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| Laravel | [link](./tutoriais/laravel/linux/ubuntu.md) | Não tem | Não tem | Não tem |
+## Licença
 
-# Gerenciadores de Pacotes
+Licenciado sob [MIT](LICENSE).
 
-| Nome  | Linux | MacOS | Windows | FreeBSD
-| --- | --- | --- | --- | --- |
-| Chocolatey | Não tem | Não tem | [link](./tutoriais/chocolatey/windows/windows.md) | Não tem |
+<div id='contributing'></div>
 
-# Outros
+## Contribuindo
 
-| Nome  | Linux | MacOS | Windows | FreeBSD
-| --- | --- | --- | --- | --- |
-| Docker | [link](./tutoriais/docker/README.md) | Não tem | [link](./tutoriais/docker/windows/windows.md) | Não tem |
-| Apache | [link](./tutoriais/apache/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| Nginx | [link](./tutoriais/nginx/linux/ubuntu.md) | Não tem | Não tem | Não tem |
-| Git | [link](./tutoriais/git/linux/ubuntu.md) | Não tem | Não tem | [link](./tutoriais/git/freebsd/README.md) |
+Siga as [diretrizes de contribuição](CONTRIBUTING.md) para contribuir com o projeto.
