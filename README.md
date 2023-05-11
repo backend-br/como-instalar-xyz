@@ -39,11 +39,11 @@ Repositório com vários tutoriais para instalar várias coisas em vários siste
 
 ### Bancos de Dados
 
-| Nome       | Linux                                       | MacOS | Windows | FreeBSD |
-|------------|---------------------------------------------|-------|---------|---------|
-| MySQL      | [link](./tutoriais/mysql/linux/ubuntu.md)   |       |         |         |
-| MongoDB    | [link](./tutoriais/mongodb/linux/ubuntu.md) |       |         |         |
-| PostgreSQL | [link](./tutoriais/postgresql/linux.md)     |       |         |         |
+| Nome       | Linux                                       | MacOS | Windows | FreeBSD                                   |
+|------------|---------------------------------------------|-------|---------|-------------------------------------------|
+| MySQL      | [link](./tutoriais/mysql/linux/ubuntu.md)   |       |         |                                           |
+| MongoDB    | [link](./tutoriais/mongodb/linux/ubuntu.md) |       |         |                                           |
+| PostgreSQL | [link](./tutoriais/postgresql/linux.md)     |       |         | [link](./tutoriais/postgresql/freebsd.md) |
 
 <div id='managers'></div>
 
