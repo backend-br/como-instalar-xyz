@@ -1,3 +1,0 @@
-# Eclipse
-
-- [Ubuntu](./ubuntu.md)

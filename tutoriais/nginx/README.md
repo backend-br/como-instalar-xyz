@@ -1,3 +1,3 @@
-# NginX
+# Nginx
 
 - [Ubuntu](./linux/ubuntu.md)

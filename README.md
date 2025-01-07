@@ -26,12 +26,10 @@ Repositório com vários tutoriais para instalar várias coisas em vários siste
 | Nome   | Linux                                            | MacOS                             | Windows                                     | FreeBSD |
 |--------|--------------------------------------------------|-----------------------------------|---------------------------------------------|---------|
 | R      | [link](./tutoriais/R/linux/ubuntu.md)            |                                   |                                             |         |
-| Go     | [link](./tutoriais/go/linux.md)                  |                                   |                                             |         |
 | PHP    | [link](./tutoriais/php/linux/ubuntu.md)          |                                   |                                             |         |
 | Ruby   | [link](./tutoriais/ruby/linux.md)                | [link](./tutoriais/ruby/macos.md) | [link](./tutoriais/ruby/windows.md)         |         |
 | Rust   | [link](./tutoriais/rust)                         |                                   |                                             |         |
 | Java   | [link](./tutoriais/java/linux/ubuntu.md)         |                                   | [link](./tutoriais/java/windows/windows.md) |         |
-| NodeJS | [link](./tutoriais/nodejs/linux.md)              | [link](./tutoriais/nodejs/mac.md) | [link](./tutoriais/nodejs/windows.md)       |         |
 | Kotlin | [link](./tutoriais/kotlin/linux/ubuntu.md)       |                                   |                                             |         |
 | Python | [link](./tutoriais/python/linux/python_linux.md) |                                   |                                             |         |
 
@@ -60,7 +58,6 @@ Repositório com vários tutoriais para instalar várias coisas em vários siste
 | Nome         | Linux                                       | MacOS                                     | Windows                                       | FreeBSD |
 |--------------|---------------------------------------------|-------------------------------------------|-----------------------------------------------|---------|
 | VSCode       | [link](./tutoriais/vscode/README.md)        | [link](./tutoriais/vscode/macOS/macOS.md) | [link](./tutoriais/vscode/windows/windows.md) |         |
-| Eclipse      | [link](./tutoriais/eclipse/linux/README.md) |                                           |                                               |         |
 | Sublime Text | [link](./tutoriais/sublime/linux/ubuntu.md) |                                           |                                               |         |
 
 <div id='frameworks'></div>
@@ -76,12 +73,11 @@ Repositório com vários tutoriais para instalar várias coisas em vários siste
 
 ### Outros
 
-| Nome   | Linux                                      | MacOS | Windows                                       | FreeBSD                                   |
-|--------|--------------------------------------------|-------|-----------------------------------------------|-------------------------------------------|
-| Git    | [link](./tutoriais/git/linux/ubuntu.md)    |       |                                               | [link](./tutoriais/git/freebsd/README.md) |
-| Nginx  | [link](./tutoriais/nginx/linux/ubuntu.md)  |       |                                               |                                           |
-| Docker | [link](./tutoriais/docker/README.md)       |       | [link](./tutoriais/docker/windows/windows.md) |                                           |
-| Apache | [link](./tutoriais/apache/linux/ubuntu.md) |       |                                               |                                           |
+| Nome   | Linux                                      | MacOS | Windows | FreeBSD |
+|--------|--------------------------------------------|-------|---------|---------|
+| Nginx  | [link](./tutoriais/nginx/linux/ubuntu.md)  |       |         |         |
+| Docker | [link](./tutoriais/docker/README.md)       |       |         |         |
+| Apache | [link](./tutoriais/apache/linux/ubuntu.md) |       |         |         |
 
 <div id='license'></div>
 
