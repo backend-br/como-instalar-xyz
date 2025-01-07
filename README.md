@@ -70,7 +70,6 @@ Repositório com vários tutoriais para instalar várias coisas em vários siste
 | Nome     | Linux                                        | MacOS | Windows | FreeBSD |
 |----------|----------------------------------------------|-------|---------|---------|
 | Pyenv    | [link](./tutoriais/pyenv/linux/ubuntu.md)    |       |         |         |
-| Laravel  | [link](./tutoriais/laravel/linux/ubuntu.md)  |       |         |         |
 | Composer | [link](./tutoriais/composer/linux/ubuntu.md) |       |         |         |
 
 <div id='others'></div>
