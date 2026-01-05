@@ -12,7 +12,7 @@ jobs:
       issues: write
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Check links
         id: lychee
         uses: lycheeverse/lychee-action@v2.7.0
