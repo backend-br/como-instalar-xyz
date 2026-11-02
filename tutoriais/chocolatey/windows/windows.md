@@ -57,7 +57,7 @@ Se não houver nenhum erro, você já pode utilizar o Chocolatey. Escreva `choco
 choco -?
 ```
 
-Para instalar algum pacote, pesquise [aqui](https://community.chocolatey.org/packages).
+Para instalar algum pacote, pesquise no [catálogo de pacotes do Chocolatey](https://community.chocolatey.org/packages).
 
 ## Referências
 

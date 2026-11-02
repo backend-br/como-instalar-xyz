@@ -6,6 +6,7 @@ const EXPECTED_ORDER = 'Requisitos, Instalação, Verificação, Desinstalação
 const REFERENCES_SECTION = 'Referências'
 const URL = /https?:\/\/|www\./i
 const DEEPEST_HEADING_LEVEL = 3
+const VAGUE_LABELS = new Set(['aqui', 'clique aqui', 'link', 'este link', 'neste link', 'here', 'click here'])
 
 const isNamed = (link) => !URL.test(link.label) && link.label.trim() !== ''
 
@@ -111,6 +112,19 @@ class BareReferenceRule {
   }
 }
 
+class VagueLinkRule {
+  appliesTo(path, repository) {
+    return repository.isTutorial(path)
+  }
+
+  problemsOf(path, repository) {
+    return repository
+      .documentOf(path)
+      .links.filter((link) => VAGUE_LABELS.has(link.label.trim().toLowerCase()))
+      .map((link) => `vague link text "${link.label}", name the page it opens (line ${link.number})`)
+  }
+}
+
 class BrokenLinkRule {
   appliesTo() {
     return true
@@ -142,6 +156,7 @@ export const rules = [
   new SectionRule(),
   new FenceLanguageRule(),
   new BareReferenceRule(),
+  new VagueLinkRule(),
   new BrokenLinkRule(),
   new LinkedTutorialRule(),
 ]
