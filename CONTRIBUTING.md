@@ -71,7 +71,8 @@ estas regras:
 - As seções `##` são exatamente estas, nesta ordem: `Requisitos`, `Instalação`, `Verificação`, `Desinstalação` e
   `Referências`. Apenas `Desinstalação` é opcional.
 - Os passos dentro de `Instalação` podem usar subtítulos `###`. Não use outros títulos `#` além do título, nem `####`.
-- Todo comando fica em um bloco de código cercado (` ``` `) com a linguagem indicada, como `bash` ou `powershell`.
+- Todo comando fica em um bloco de código cercado (` ``` `) com a linguagem indicada, como `bash` ou `powershell`, e
+  cada linha do bloco tem um comando só: não encadeie comandos com `&&`, `||` ou `;`.
 - Em `Requisitos`, escreva "Nenhum." quando não houver requisitos.
 - `Referências` é uma lista de links com nome, como `[Documentação oficial do Docker](https://docs.docker.com/)`, nunca
   URLs soltas.
@@ -80,7 +81,7 @@ estas regras:
 - Links dizem para onde levam: nada de "aqui", "clique aqui" ou "link".
 
 Um check de CI verifica essas regras em todo pull request: os títulos e a abertura do tutorial, o `README.md` de cada
-ferramenta, a linguagem dos blocos de código, as URLs soltas em `Referências`, os links vagos, os links para arquivos
+ferramenta, a linguagem dos blocos de código, os comandos encadeados, as URLs soltas em `Referências`, os links vagos, os links para arquivos
 que não existem e os tutoriais sem link. Para rodar o check localmente:
 
 ```bash

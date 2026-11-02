@@ -165,6 +165,47 @@ test('reports a code fence without a language', () => {
   assert.deepEqual(messagesOf(problems), ['code block without a language (line 10)'])
 })
 
+test('reports chained commands in a shell block', () => {
+  // Given a tutorial that chains two commands on one line
+  const files = validRepository(
+    tutorialWith({ installation: ['```bash', 'sudo apt-get update && sudo apt-get install docker-ce', '```'] }),
+  )
+
+  // When the repository is checked
+  const problems = checkRepository(files)
+
+  // Then the chained line is reported
+  assert.deepEqual(messagesOf(problems), ['chained commands, write one command per line (line 11)'])
+})
+
+test('accepts a semicolon inside quotes', () => {
+  // Given a command whose argument carries a semicolon between quotes
+  const files = validRepository(
+    tutorialWith({
+      installation: ['```bash', `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`, '```'],
+    }),
+  )
+
+  // When the repository is checked
+  const problems = checkRepository(files)
+
+  // Then no problem is reported
+  assert.deepEqual(problems, [])
+})
+
+test('does not check blocks that are not shell commands', () => {
+  // Given a SQL block with statements ending in semicolons
+  const files = validRepository(
+    tutorialWith({ installation: ['```sql', 'CREATE DATABASE app; CREATE USER app;', '```'] }),
+  )
+
+  // When the repository is checked
+  const problems = checkRepository(files)
+
+  // Then no problem is reported
+  assert.deepEqual(problems, [])
+})
+
 test('reports a bare URL in the references', () => {
   // Given a tutorial whose references list a bare URL
   const files = validRepository(tutorialWith({ references: ['- https://docs.docker.com/'] }))
