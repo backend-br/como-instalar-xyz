@@ -1,6 +1,6 @@
 # Rust
 
-Uma linguagem empoderando todos a construir softwares confiáveis e eficientes.
+Linguagem de programação focada em desempenho e confiabilidade.
 
 ## Tutoriais
 

@@ -1,13 +1,12 @@
 # Visual Studio Code no Windows
 
-O Visual Studio Code (VS Code) é um editor de código feito pela Microsoft. Este tutorial instala o VS Code no Windows
-pelo instalador oficial.
-
 ## Requisitos
 
 - Windows 7, 8 ou 10.
 
 ## Instalação
+
+Este tutorial instala o VS Code no Windows pelo instalador oficial.
 
 ### 1. Baixe o Visual Studio Code
 

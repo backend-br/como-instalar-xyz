@@ -42,6 +42,12 @@ export class Repository {
     return this.isUnderTutorials(path) && segments.length >= 3 && segments.at(-1) !== README
   }
 
+  isToolReadme(path) {
+    const segments = path.split('/')
+
+    return this.isUnderTutorials(path) && segments.length === 3 && segments.at(-1) === README
+  }
+
   toolReadmeOf(path) {
     const [, tool] = path.split('/')
 
@@ -80,9 +86,5 @@ export class Repository {
     return sources
       .filter((source) => this.files.has(source))
       .some((source) => this.localLinksOf(source).some((link) => link.resolved === path))
-  }
-
-  isTutorialLinked(path) {
-    return this.isLinkedFrom([ROOT_README, this.toolReadmeOf(path)], path)
   }
 }

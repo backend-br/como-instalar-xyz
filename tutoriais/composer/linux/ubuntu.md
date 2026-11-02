@@ -1,10 +1,5 @@
 # Composer no Ubuntu
 
-Composer é o gerenciador de dependências do PHP. A maioria (se não todos) dos frameworks modernos utiliza o `composer`
-para tratar e versionar as bibliotecas utilizadas em sua estrutura interna.
-
-Este tutorial é uma versão modificada do [manual básico de instalação do Composer](https://getcomposer.org/download/).
-
 ## Requisitos
 
 - PHP 5.3.2+ (mas prefira o PHP 7+).
@@ -12,6 +7,8 @@ Este tutorial é uma versão modificada do [manual básico de instalação do Co
 Se alguma biblioteca ou extensão nativa do PHP faltar, o instalador acusará o recurso faltante.
 
 ## Instalação
+
+Este tutorial é uma versão modificada do [manual básico de instalação do Composer](https://getcomposer.org/download/).
 
 ### 1. Baixe e execute o instalador
 

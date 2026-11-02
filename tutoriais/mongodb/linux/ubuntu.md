@@ -1,9 +1,5 @@
 # MongoDB no Ubuntu
 
-O MongoDB já está incluído nos repositórios de pacotes do Ubuntu, mas o repositório oficial do MongoDB fornece versões
-mais atualizadas e é a maneira recomendada de instalar o software. Este tutorial instala o MongoDB 4.0 pelo repositório
-oficial.
-
 ## Requisitos
 
 - Ubuntu 18.04 (Bionic), 16.04 (Xenial) ou 14.04 (Trusty). A instalação difere entre essas versões, e o tutorial mostra
@@ -11,6 +7,9 @@ oficial.
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+O MongoDB já está nos repositórios do Ubuntu, mas o repositório oficial do MongoDB traz versões mais atualizadas e é a
+forma recomendada. Este tutorial instala o MongoDB 4.0 pelo repositório oficial.
 
 ### 1. Importe a chave do repositório
 

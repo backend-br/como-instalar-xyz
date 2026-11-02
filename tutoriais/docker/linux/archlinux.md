@@ -1,13 +1,13 @@
 # Docker no Arch Linux
 
-Com alguns comandos simples você consegue instalar o Docker na sua máquina. A forma mais fácil é utilizando o
-[pacman](https://wiki.archlinux.org/title/Pacman), gerenciador de pacotes nativo do Arch Linux.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+A forma mais fácil de instalar no Arch Linux é pelo [pacman](https://wiki.archlinux.org/title/Pacman), o gerenciador de
+pacotes nativo.
 
 ### 1. Remova versões antigas
 

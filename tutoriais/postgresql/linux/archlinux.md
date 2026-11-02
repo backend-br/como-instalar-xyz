@@ -1,14 +1,13 @@
 # PostgreSQL no Arch Linux
 
-A melhor forma de instalar o PostgreSQL no Arch Linux é através do
-[pacman](https://wiki.archlinux.org/title/Pacman_(Portugu%C3%AAs)), o gerenciador de pacotes padrão para instalar
-pacotes dos repositórios oficiais.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala o PostgreSQL pelo [pacman](https://wiki.archlinux.org/title/Pacman_(Portugu%C3%AAs)), o
+gerenciador de pacotes padrão do Arch Linux.
 
 ### 1. Instale o PostgreSQL
 

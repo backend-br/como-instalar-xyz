@@ -1,13 +1,12 @@
 # Rust no Debian
 
-Rust é uma linguagem de programação focada em desempenho e confiabilidade. Este tutorial instala o Rust com o `rustup`,
-que instala e gerencia o compilador e o `cargo`.
-
 ## Requisitos
 
 - `curl` instalado.
 
 ## Instalação
+
+Este tutorial instala o Rust com o `rustup`, que instala e gerencia o compilador e o `cargo`.
 
 ### 1. Execute o instalador do rustup
 

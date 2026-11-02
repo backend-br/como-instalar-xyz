@@ -1,13 +1,12 @@
 # R no Ubuntu
 
-R é uma linguagem de programação voltada para estatística e análise de dados. Este tutorial instala o interpretador da
-linguagem R pelo apt.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala o interpretador da linguagem R pelo apt.
 
 Para instalar o interpretador da linguagem R, use o seguinte comando no terminal:
 

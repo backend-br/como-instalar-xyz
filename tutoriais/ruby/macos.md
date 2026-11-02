@@ -1,10 +1,5 @@
 # Ruby no macOS
 
-As versões atuais do macOS vêm com uma versão do Ruby pré-instalada, mas para utilizar outra versão é preciso um
-gerenciador de versões. Este tutorial instala o Ruby com o RVM ou com o rbenv.
-
-A Apple avisou que, em novas versões do sistema, muitas das ferramentas de desenvolvedor serão removidas.
-
 ## Requisitos
 
 - [Homebrew](https://brew.sh/). Para instalar, digite no terminal:
@@ -14,6 +9,10 @@ A Apple avisou que, em novas versões do sistema, muitas das ferramentas de dese
 ```
 
 ## Instalação
+
+O macOS já vem com uma versão do Ruby, mas para usar outra versão é preciso um gerenciador de versões. Este tutorial
+instala o Ruby com o RVM ou com o rbenv. A Apple avisou que, em novas versões do sistema, muitas das ferramentas de
+desenvolvedor serão removidas.
 
 Escolha uma das duas opções abaixo.
 

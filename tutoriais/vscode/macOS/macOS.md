@@ -1,9 +1,5 @@
 # Visual Studio Code no macOS
 
-O **Visual Studio Code**, popularmente conhecido como **VS Code**, é um editor de texto open source feito pela
-Microsoft. Ele vem ganhando popularidade graças à fluidez, à facilidade de uso, às ferramentas nativas e à grande
-quantidade de plugins disponíveis.
-
 ## Requisitos
 
 - macOS 10.9+.

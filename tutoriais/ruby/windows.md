@@ -1,8 +1,5 @@
 # Ruby no Windows
 
-Ruby é uma linguagem de programação dinâmica. Este tutorial instala o Ruby no Windows com o RubyInstaller ou com o
-Scoop.
-
 ## Requisitos
 
 Para a opção 1 (RubyInstaller), nenhum. Para a opção 2 (Scoop):
@@ -11,6 +8,8 @@ Para a opção 1 (RubyInstaller), nenhum. Para a opção 2 (Scoop):
 - [.NET Framework 4.5](https://dotnet.microsoft.com/download).
 
 ## Instalação
+
+Este tutorial instala o Ruby no Windows com o RubyInstaller ou com o Scoop.
 
 Escolha uma das duas opções abaixo.
 

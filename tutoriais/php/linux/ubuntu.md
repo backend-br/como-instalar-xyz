@@ -1,15 +1,13 @@
 # PHP no Ubuntu
 
-O PHP é o componente que processa código para exibir conteúdo dinâmico: ele executa scripts, conecta às bases de dados
-MySQL para obter informações e entrega o conteúdo processado para o servidor web exibir. Este tutorial instala o PHP
-para rodar com o Apache e o MySQL.
-
 ## Requisitos
 
 - [Apache](../../apache/linux/ubuntu.md) instalado.
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala o PHP para rodar com o Apache e o MySQL.
 
 ### 1. Instale o PHP
 

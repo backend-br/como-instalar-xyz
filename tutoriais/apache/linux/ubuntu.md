@@ -1,8 +1,5 @@
 # Apache no Ubuntu
 
-O servidor HTTP Apache é o servidor web mais usado no mundo. Ele oferece muitos recursos poderosos, incluindo módulos
-carregáveis dinamicamente, suporte robusto a mídia e ampla integração com outros softwares populares.
-
 ## Requisitos
 
 - Um servidor Ubuntu com um usuário comum (não root) com privilégios `sudo`.

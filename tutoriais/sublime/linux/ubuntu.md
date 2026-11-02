@@ -1,13 +1,12 @@
 # Sublime Text no Ubuntu
 
-O Sublime Text é um editor de texto para código. Este tutorial instala a versão 3 do Sublime Text pelo repositório
-oficial.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala a versão 3 do Sublime Text pelo repositório oficial.
 
 ### 1. Adicione a chave GPG
 

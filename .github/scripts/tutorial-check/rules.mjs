@@ -4,6 +4,7 @@ const REQUIRED_SECTIONS = ['Requisitos', 'Instalação', 'Verificação', 'Refer
 const SECTION_ORDER = ['Requisitos', 'Instalação', 'Verificação', 'Desinstalação', 'Referências']
 const EXPECTED_ORDER = 'Requisitos, Instalação, Verificação, Desinstalação (optional), Referências'
 const REFERENCES_SECTION = 'Referências'
+const TUTORIALS_SECTION = 'Tutoriais'
 const URL = /https?:\/\/|www\./i
 const DEEPEST_HEADING_LEVEL = 3
 const VAGUE_LABELS = new Set(['aqui', 'clique aqui', 'link', 'este link', 'neste link', 'here', 'click here'])
@@ -50,6 +51,56 @@ class HeadingDepthRule {
         (heading) =>
           `\`${'#'.repeat(heading.level)}\` heading is not allowed: "${heading.text}" (line ${heading.number})`,
       )
+  }
+}
+
+class IntroductionRule {
+  appliesTo(path, repository) {
+    return repository.isTutorial(path)
+  }
+
+  problemsOf(path, repository) {
+    const document = repository.documentOf(path)
+    const [title] = document.headings.filter((heading) => heading.level === 1)
+    const firstSection = document.headings.find((heading) => heading.level === 2)
+
+    if (!title || !firstSection) {
+      return []
+    }
+
+    return document.lines
+      .filter((line) => line.number > title.number && line.number < firstSection.number && line.text.trim() !== '')
+      .slice(0, 1)
+      .map(
+        (line) =>
+          `text between the title and the first section, describe the tool in ${repository.toolReadmeOf(path)} (line ${line.number})`,
+      )
+  }
+}
+
+class ToolReadmeRule {
+  appliesTo(path, repository) {
+    return repository.isToolReadme(path)
+  }
+
+  problemsOf(path, repository) {
+    const document = repository.documentOf(path)
+    const headings = document.headings
+    const [title] = headings.filter((heading) => heading.level === 1)
+    const tutorials = headings.find((heading) => heading.level === 2 && heading.text === TUTORIALS_SECTION)
+
+    if (!title) {
+      return ['the tool README is missing its `#` title']
+    }
+
+    const description = document.lines.some(
+      (line) => line.number > title.number && (!tutorials || line.number < tutorials.number) && line.text.trim() !== '',
+    )
+
+    return [
+      ...(description ? [] : ['the tool README is missing the description under its title']),
+      ...(tutorials ? [] : [`the tool README is missing the \`## ${TUTORIALS_SECTION}\` section`]),
+    ]
   }
 }
 
@@ -144,14 +195,20 @@ class LinkedTutorialRule {
   }
 
   problemsOf(path, repository) {
-    return repository.isTutorialLinked(path)
-      ? []
-      : [`tutorial not linked from README.md or ${repository.toolReadmeOf(path)}`]
+    const readme = repository.toolReadmeOf(path)
+
+    if (!repository.exists(readme)) {
+      return [`tool README ${readme} does not exist`]
+    }
+
+    return repository.isLinkedFrom([readme], path) ? [] : [`tutorial not linked from ${readme}`]
   }
 }
 
 export const rules = [
   new TitleRule(),
+  new IntroductionRule(),
+  new ToolReadmeRule(),
   new HeadingDepthRule(),
   new SectionRule(),
   new FenceLanguageRule(),
