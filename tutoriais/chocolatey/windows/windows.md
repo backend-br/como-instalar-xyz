@@ -43,10 +43,11 @@ Set-ExecutionPolicy Bypass -Scope Process
 
 ### 3. Instale o Chocolatey
 
-Copie e cole o seguinte comando no seu terminal e execute apertando `Enter`:
+Execute os comandos abaixo no terminal, um de cada vez:
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force
+iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
 ## Verificação

@@ -7,6 +7,9 @@ const REFERENCES_SECTION = 'Referências'
 const TUTORIALS_SECTION = 'Tutoriais'
 const URL = /https?:\/\/|www\./i
 const DEEPEST_HEADING_LEVEL = 3
+const SHELLS = new Set(['bash', 'sh', 'shell', 'zsh', 'console', 'powershell', 'ps1', 'pwsh', 'cmd', 'bat'])
+const QUOTED = /"(?:[^"\\]|\\.)*"|'[^']*'/g
+const CHAINED = /&&|\|\||;\s*\S/
 const VAGUE_LABELS = new Set(['aqui', 'clique aqui', 'link', 'este link', 'neste link', 'here', 'click here'])
 
 const isNamed = (link) => !URL.test(link.label) && link.label.trim() !== ''
@@ -176,6 +179,21 @@ class VagueLinkRule {
   }
 }
 
+class OneCommandPerLineRule {
+  appliesTo(path, repository) {
+    return repository.isTutorial(path)
+  }
+
+  problemsOf(path, repository) {
+    return repository
+      .documentOf(path)
+      .fences.filter((fence) => SHELLS.has(fence.info.toLowerCase()))
+      .flatMap((fence) => fence.lines)
+      .filter((line) => CHAINED.test(line.text.replace(QUOTED, '')))
+      .map((line) => `chained commands, write one command per line (line ${line.number})`)
+  }
+}
+
 class BrokenLinkRule {
   appliesTo() {
     return true
@@ -212,6 +230,7 @@ export const rules = [
   new HeadingDepthRule(),
   new SectionRule(),
   new FenceLanguageRule(),
+  new OneCommandPerLineRule(),
   new BareReferenceRule(),
   new VagueLinkRule(),
   new BrokenLinkRule(),

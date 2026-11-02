@@ -37,10 +37,11 @@ gem install rails --no-document
 
 Segure a tecla Windows e a tecla R juntas. Na janela que se abre, digite `powershell` e aperte `Enter`.
 
-Cole o seguinte código e aperte `Enter`:
+Execute os comandos abaixo, um de cada vez:
 
 ```powershell
-Set-ExecutionPolicy RemoteSigned -scope CurrentUser -force ; iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
 
 Se tudo ocorreu bem, instale o Ruby com o comando:

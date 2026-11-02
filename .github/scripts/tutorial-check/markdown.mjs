@@ -19,6 +19,7 @@ class Fence {
     this.marker = marker
     this.info = info
     this.number = number
+    this.lines = []
   }
 
   closedBy(text) {
@@ -44,6 +45,8 @@ const scan = (content) => {
     if (open) {
       if (open.closedBy(text)) {
         open = null
+      } else {
+        open.lines.push(new Line(text, number))
       }
       return
     }
