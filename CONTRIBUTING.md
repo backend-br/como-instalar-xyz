@@ -60,7 +60,7 @@ Para iniciar o desenvolvimento, você precisará seguir alguns passos:
 
 ### Adicionando um tutorial
 
-Todo tutorial segue o [modelo](tutoriais/MODELO.md). Copie o modelo para `tutoriais/<ferramenta>/<sistema>/` e siga
+Todo tutorial segue o [modelo](tutoriais/TEMPLATE.md). Copie o modelo para `tutoriais/<ferramenta>/<sistema>/` e siga
 estas regras:
 
 - O título é `# <Ferramenta> no <Sistema>`, seguido de uma ou duas frases dizendo o que é a ferramenta e o que o

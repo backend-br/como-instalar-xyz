@@ -61,7 +61,7 @@ test('reports a missing section', () => {
   const problems = checkRepository(files)
 
   // Then the missing section is reported
-  assert.deepEqual(messagesOf(problems), ['falta a seção `## Verificação`'])
+  assert.deepEqual(messagesOf(problems), ['missing section `## Verificação`'])
 })
 
 test('reports a section that is not in the template', () => {
@@ -74,7 +74,7 @@ test('reports a section that is not in the template', () => {
   const problems = checkRepository(files)
 
   // Then the extra section is reported
-  assert.deepEqual(messagesOf(problems), ['seção `## Verificação nutela` não faz parte do modelo'])
+  assert.deepEqual(messagesOf(problems), ['section `## Verificação nutela` is not part of the template'])
 })
 
 test('reports a repeated section', () => {
@@ -87,7 +87,7 @@ test('reports a repeated section', () => {
   const problems = checkRepository(files)
 
   // Then the repeated section is reported
-  assert.deepEqual(messagesOf(problems), ['seção `## Instalação` repetida'])
+  assert.deepEqual(messagesOf(problems), ['section `## Instalação` is repeated'])
 })
 
 test('reports sections out of order', () => {
@@ -99,7 +99,7 @@ test('reports sections out of order', () => {
 
   // Then the order is reported
   assert.deepEqual(messagesOf(problems), [
-    'seções fora de ordem, a ordem esperada é: Requisitos, Instalação, Verificação, Desinstalação (opcional), Referências',
+    'sections out of order, the expected order is: Requisitos, Instalação, Verificação, Desinstalação (optional), Referências',
   ])
 })
 
@@ -111,7 +111,7 @@ test('reports an extra title', () => {
   const problems = checkRepository(files)
 
   // Then the extra title is reported
-  assert.match(messagesOf(problems)[0], /^título `#` extra: "Dica"/)
+  assert.match(messagesOf(problems)[0], /^extra `#` title: "Dica"/)
 })
 
 test('reports a missing title', () => {
@@ -122,7 +122,7 @@ test('reports a missing title', () => {
   const problems = checkRepository(files)
 
   // Then the missing title is reported
-  assert.deepEqual(messagesOf(problems), ['falta o título `#` do tutorial'])
+  assert.deepEqual(messagesOf(problems), ['the tutorial is missing its `#` title'])
 })
 
 test('reports a level four heading', () => {
@@ -133,7 +133,7 @@ test('reports a level four heading', () => {
   const problems = checkRepository(files)
 
   // Then the heading is reported
-  assert.match(messagesOf(problems)[0], /^título `####` não é permitido: "Detalhe"/)
+  assert.match(messagesOf(problems)[0], /^`####` heading is not allowed: "Detalhe"/)
 })
 
 test('ignores headings written inside code blocks', () => {
@@ -157,7 +157,7 @@ test('reports a code fence without a language', () => {
   const problems = checkRepository(files)
 
   // Then the fence is reported with its line
-  assert.deepEqual(messagesOf(problems), ['bloco de código sem linguagem (linha 11)'])
+  assert.deepEqual(messagesOf(problems), ['code block without a language (line 11)'])
 })
 
 test('reports a bare URL in the references', () => {
@@ -168,7 +168,7 @@ test('reports a bare URL in the references', () => {
   const problems = checkRepository(files)
 
   // Then the bare URL is reported
-  assert.match(messagesOf(problems)[0], /^URL solta em Referências/)
+  assert.match(messagesOf(problems)[0], /^bare URL in Referências/)
 })
 
 test('reports a reference link named after its own URL', () => {
@@ -181,7 +181,7 @@ test('reports a reference link named after its own URL', () => {
   const problems = checkRepository(files)
 
   // Then the link is reported as a bare URL
-  assert.match(messagesOf(problems)[0], /^URL solta em Referências/)
+  assert.match(messagesOf(problems)[0], /^bare URL in Referências/)
 })
 
 test('accepts a named reference link with parentheses in the URL', () => {
@@ -209,7 +209,7 @@ test('reports a README link to a file that does not exist', () => {
 
   // Then the broken link is reported for the README
   assert.deepEqual(problems, [
-    { path: 'README.md', message: 'link para arquivo inexistente: tutoriais/docker/linux/archlinux.md (linha 1)' },
+    { path: 'README.md', message: 'link to a missing file: tutoriais/docker/linux/archlinux.md (line 1)' },
   ])
 })
 
@@ -236,7 +236,7 @@ test('reports a tutorial that no README links to', () => {
 
   // Then the tutorial is reported
   assert.deepEqual(problems, [
-    { path: TUTORIAL, message: 'tutorial sem link no README.md nem em tutoriais/docker/README.md' },
+    { path: TUTORIAL, message: 'tutorial not linked from README.md or tutoriais/docker/README.md' },
   ])
 })
 
@@ -259,7 +259,7 @@ test('does not treat the template nor the tool READMEs as tutorials', () => {
   // Given a repository with the template and a tool README that break the tutorial standard
   const files = repositoryWith({
     'README.md': '# Como instalar XYZ',
-    'tutoriais/MODELO.md': '# Ferramenta no Sistema\n\n```\ncomando\n```\n',
+    'tutoriais/TEMPLATE.md': '# Ferramenta no Sistema\n\n```\ncomando\n```\n',
     'tutoriais/docker/README.md': '# Docker\n\n## Tutoriais\n',
   })
 
@@ -272,11 +272,11 @@ test('does not treat the template nor the tool READMEs as tutorials', () => {
 
 test('formats each problem as path and message', () => {
   // Given a list of problems
-  const problems = [{ path: TUTORIAL, message: 'falta a seção `## Verificação`' }]
+  const problems = [{ path: TUTORIAL, message: 'missing section `## Verificação`' }]
 
   // When the problems are reported
   const lines = report(problems)
 
   // Then each line starts with the path of the file
-  assert.deepEqual(lines, [`${TUTORIAL}: falta a seção \`## Verificação\``])
+  assert.deepEqual(lines, [`${TUTORIAL}: missing section \`## Verificação\``])
 })

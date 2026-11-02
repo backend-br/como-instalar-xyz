@@ -2,7 +2,7 @@ import { linksIn } from './markdown.mjs'
 
 const REQUIRED_SECTIONS = ['Requisitos', 'Instalação', 'Verificação', 'Referências']
 const SECTION_ORDER = ['Requisitos', 'Instalação', 'Verificação', 'Desinstalação', 'Referências']
-const EXPECTED_ORDER = 'Requisitos, Instalação, Verificação, Desinstalação (opcional), Referências'
+const EXPECTED_ORDER = 'Requisitos, Instalação, Verificação, Desinstalação (optional), Referências'
 const REFERENCES_SECTION = 'Referências'
 const URL = /https?:\/\/|www\./i
 const DEEPEST_HEADING_LEVEL = 3
@@ -24,14 +24,14 @@ class TitleRule {
     const titles = headings.filter((heading) => heading.level === 1)
 
     if (titles.length === 0) {
-      return ['falta o título `#` do tutorial']
+      return ['the tutorial is missing its `#` title']
     }
 
-    const problems = headings[0].level === 1 ? [] : ['o tutorial deve começar pelo título `#`']
+    const problems = headings[0].level === 1 ? [] : ['the tutorial must start with its `#` title']
 
     return [
       ...problems,
-      ...titles.slice(1).map((heading) => `título \`#\` extra: "${heading.text}" (linha ${heading.number})`),
+      ...titles.slice(1).map((heading) => `extra \`#\` title: "${heading.text}" (line ${heading.number})`),
     ]
   }
 }
@@ -47,7 +47,7 @@ class HeadingDepthRule {
       .headings.filter((heading) => heading.level > DEEPEST_HEADING_LEVEL)
       .map(
         (heading) =>
-          `título \`${'#'.repeat(heading.level)}\` não é permitido: "${heading.text}" (linha ${heading.number})`,
+          `\`${'#'.repeat(heading.level)}\` heading is not allowed: "${heading.text}" (line ${heading.number})`,
       )
   }
 }
@@ -65,19 +65,19 @@ class SectionRule {
 
     const unknown = sections
       .filter((section) => !SECTION_ORDER.includes(section))
-      .map((section) => `seção \`## ${section}\` não faz parte do modelo`)
+      .map((section) => `section \`## ${section}\` is not part of the template`)
 
     const repeated = [...new Set(sections.filter((section, index) => sections.indexOf(section) !== index))].map(
-      (section) => `seção \`## ${section}\` repetida`,
+      (section) => `section \`## ${section}\` is repeated`,
     )
 
     const missing = REQUIRED_SECTIONS.filter((section) => !sections.includes(section)).map(
-      (section) => `falta a seção \`## ${section}\``,
+      (section) => `missing section \`## ${section}\``,
     )
 
     const positions = sections.map((section) => SECTION_ORDER.indexOf(section)).filter((position) => position >= 0)
     const outOfOrder = positions.some((position, index) => index > 0 && position < positions[index - 1])
-      ? [`seções fora de ordem, a ordem esperada é: ${EXPECTED_ORDER}`]
+      ? [`sections out of order, the expected order is: ${EXPECTED_ORDER}`]
       : []
 
     return [...unknown, ...repeated, ...missing, ...outOfOrder]
@@ -93,7 +93,7 @@ class FenceLanguageRule {
     return repository
       .documentOf(path)
       .fences.filter((fence) => fence.info === '')
-      .map((fence) => `bloco de código sem linguagem (linha ${fence.number})`)
+      .map((fence) => `code block without a language (line ${fence.number})`)
   }
 }
 
@@ -107,7 +107,7 @@ class BareReferenceRule {
       .documentOf(path)
       .linesOfSection(REFERENCES_SECTION)
       .filter((line) => URL.test(withoutNamedLinks(line.prose)))
-      .map((line) => `URL solta em Referências, use um link com nome (linha ${line.number})`)
+      .map((line) => `bare URL in Referências, use a named link (line ${line.number})`)
   }
 }
 
@@ -120,7 +120,7 @@ class BrokenLinkRule {
     return repository
       .localLinksOf(path)
       .filter((link) => !repository.exists(link.resolved))
-      .map((link) => `link para arquivo inexistente: ${link.target} (linha ${link.number})`)
+      .map((link) => `link to a missing file: ${link.target} (line ${link.number})`)
   }
 }
 
@@ -132,7 +132,7 @@ class LinkedTutorialRule {
   problemsOf(path, repository) {
     return repository.isTutorialLinked(path)
       ? []
-      : [`tutorial sem link no README.md nem em ${repository.toolReadmeOf(path)}`]
+      : [`tutorial not linked from README.md or ${repository.toolReadmeOf(path)}`]
   }
 }
 
