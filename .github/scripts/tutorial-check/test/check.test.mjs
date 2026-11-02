@@ -171,6 +171,19 @@ test('reports a bare URL in the references', () => {
   assert.match(messagesOf(problems)[0], /^bare URL in Referências/)
 })
 
+test('reports a link whose text does not name the page', () => {
+  // Given a tutorial with a link whose text is "aqui"
+  const files = validRepository(
+    tutorialWith({ installation: ['Pesquise os pacotes [aqui](https://community.chocolatey.org/packages).'] }),
+  )
+
+  // When the repository is checked
+  const problems = checkRepository(files)
+
+  // Then the vague link is reported with its line
+  assert.deepEqual(messagesOf(problems), ['vague link text "aqui", name the page it opens (line 11)'])
+})
+
 test('reports a reference link named after its own URL', () => {
   // Given a tutorial whose reference link uses the URL as its name
   const files = validRepository(
