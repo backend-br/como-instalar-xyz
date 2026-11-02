@@ -186,7 +186,7 @@ test('reports a link whose text does not name the page', () => {
   const problems = checkRepository(files)
 
   // Then the vague link is reported with its line
-  assert.deepEqual(messagesOf(problems), ['vague link text "aqui", name the page it opens (line 11)'])
+  assert.deepEqual(messagesOf(problems), ['vague link text "aqui", name the page it opens (line 10)'])
 })
 
 test('reports a reference link named after its own URL', () => {
