@@ -150,7 +150,7 @@ Dificilmente precisamos reiniciar o serviço *NginX*, pois ao fazer qualquer alt
 
 Aqui dois links fundamentais para começar a pensar em configura-lo para uso em produção:
 
-* [https://nginxconfig.io/](Um gerador de configuração para diversos usos particulares)
-* [https://www.nginx.com/resources/wiki/start/topics/tutorials/install/](Tutorial Oficial do NginX)
+* [Um gerador de configuração para diversos usos particulares](https://www.digitalocean.com/community/tools/nginx)
+* [Documentação oficial do NginX](https://docs.nginx.com/)
 
 Em outros tutoriais abordaremos as configurações de *Virtual Host*, que permitirão que nosso servidor responda por vários domínios, e uma configuração séria de *HTTPS*, pois para estar na Internet, não basta apenas colocar um certificado e ativar, há que realizar muitos passos para ter um mínimo de segurança.

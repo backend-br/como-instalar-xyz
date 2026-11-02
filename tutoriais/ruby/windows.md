@@ -32,7 +32,7 @@ gem install rails --no-document
 
 Requisitos:
 * [PowerShell 3](https://www.microsoft.com/en-us/download/details.aspx?id=34595)
-* [NET Framework 4.5](https://www.microsoft.com/net/download)
+* [NET Framework 4.5](https://dotnet.microsoft.com/download)
 
 Se os requisitos atendem, segure a tecla Windows e a tecla R juntas. Na janela que se abre, digite `powershell` e aperte a tecla ENTER.
 
