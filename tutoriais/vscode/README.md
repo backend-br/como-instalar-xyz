@@ -1,5 +1,10 @@
 # Visual Studio Code (VSCode)
 
-- [Linux - Ubuntu](./linux/ubuntu.md)
-- [Linux - Arch Linux](./linux/archlinux.md)
-- [Windows - 7, 8 e 10](./windows/windows.md)
+Editor de código feito pela Microsoft.
+
+## Tutoriais
+
+- [Ubuntu](./linux/ubuntu.md)
+- [Arch Linux](./linux/archlinux.md)
+- [macOS](./macOS/macOS.md)
+- [Windows](./windows/windows.md)

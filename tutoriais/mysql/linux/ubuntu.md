@@ -1,72 +1,90 @@
-# Mysql
+# MySQL no Ubuntu
 
-Para instalar o Mysql no seu ubuntu você pode instalar via terminal com os comandos abaixos:
+O MySQL é um sistema de gerenciamento de banco de dados relacional. Este tutorial instala o servidor MySQL pelo
+terminal, com o apt.
 
-```shell
+## Requisitos
+
+- Um usuário com permissão para usar `sudo`.
+
+## Instalação
+
+### 1. Instale o servidor
+
+```bash
 sudo apt-get update
-sudo apt-get install Mysql-server
+sudo apt-get install mysql-server
 ```
 
-* Ao finalizar a instalação será aberta um terminal para você definir a senha padrão do myqsl.
+Ao final da instalação será aberto um prompt no terminal para você definir a senha padrão do MySQL.
 
-Logo em seguida basta executar o comando, esse comandos irá "startar" o Mysql e habilitará que o mesmo seja startando quando for restartado:
+### 2. Inicie o serviço
 
-```shell
-sudo systemctl start Mysql
-systemctl enable Mysql
+O comando abaixo inicia o MySQL e habilita que ele seja iniciado junto com o sistema:
+
+```bash
+sudo systemctl start mysql
+systemctl enable mysql
 ```
 
-Logo em seguida para acessar o seu Mysql basta executar o comando abaixo com a senha que você inseriu:
+### 3. Defina a senha do root, se o prompt não apareceu
 
-```shell
-Mysql -u root -p
+Caso o prompt para definir a senha não tenha aparecido durante a instalação e a senha padrão não seja `root`, siga os
+passos abaixo para definir uma nova senha. Este não é um método padrão, mas foi o único que funcionou.
+
+Acesse o arquivo de configuração padrão do MySQL para pegar a senha do usuário de administração do sistema:
+
+```bash
+sudo cat /etc/mysql/debian.cnf
 ```
 
-# Obs:
-Caso no momento em que você estava instalando e não foi exibida o prompt para inserir a sua senha e sua senha padrão não é root, basta seguir os passos abaixos para atualizar sua nova senha:
+Ao executar o comando, deve ser exibido um conteúdo como no exemplo abaixo:
 
-* Esse não é um metódo default para fazer isso, mas foi o único que funcionou:
-
-Você deve acessar o arquivo padrão de configuração do Mysql para pegar uma senha de sys-admin e acessar o Mysql:
-
-```shell
-sudo cat /etc/Mysql/debian.cnf 
-```
-
-Ao executar o comando deve ser exibido dois usuários como no exemplo abaixo:
-
-```shell
+```ini
 [client]
 host     = localhost
 user     = debian-sys-maint
 password = SENHA
-socket   = /var/run/Mysqld/Mysqld.sock
+socket   = /var/run/mysqld/mysqld.sock
 ```
 
-logo em seguida basta executar o comando com a senha do arquivo
-```shell
-Mysql -u debian-sys-maint -p
+Em seguida, acesse o MySQL com a senha do arquivo:
+
+```bash
+mysql -u debian-sys-maint -p
 ```
 
-Aqui você já vai está dentro do Mysql e poderá altera as configurações de usuário. Para simplififcar já colocarei todos os comandos que devem ser executado abaixo:
+Dentro do MySQL, execute os comandos abaixo para alterar a senha do usuário root:
 
-```shell
-Mysql> UPDATE user SET plugin='Mysql_native_password' WHERE User='root';
-Mysql> COMMIT;
-
-UPDATE Mysql.user SET authentication_string=PASSWORD('nova_senha') where user='root';
-
-Mysql> FLUSH PRIVILEGES;
-Mysql> COMMIT;
-Mysql> EXIT
+```sql
+UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+COMMIT;
+UPDATE mysql.user SET authentication_string=PASSWORD('nova_senha') where user='root';
+FLUSH PRIVILEGES;
+COMMIT;
+EXIT
 ```
 
-Após tudo isso seu usuário root vai está com a nova senha e para testar basta acessar seu Mysql:
+Depois disso, reinicie o MySQL para que o usuário root passe a usar a nova senha:
 
-```shell
-$ sudo service Mysql restart
-$ Mysql -u root -p
+```bash
+sudo service mysql restart
+```
+
+## Verificação
+
+Acesse o MySQL com o usuário root e a senha que você definiu:
+
+```bash
+mysql -u root -p
+```
+
+```text
 Enter password: sua_nova_senha
 ```
 
-E agora é só aproveitar seu Mysql :)
+Se o prompt `mysql>` aparecer, o MySQL está instalado e funcionando.
+
+## Referências
+
+- [Documentação oficial do MySQL (em inglês)](https://dev.mysql.com/doc/)

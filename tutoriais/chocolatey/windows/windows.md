@@ -1,39 +1,66 @@
-## Instalando o Chocolatey no Windows
+# Chocolatey no Windows
 
-### Requisitos:
+O Chocolatey é um gerenciador de pacotes para Windows. Este tutorial instala o Chocolatey em modo administrador.
 
-Windows 7+ / Windows Server 2003+
+## Requisitos
 
-PowerShell v2+
+- Windows 7+ ou Windows Server 2003+.
+- PowerShell v2+.
+- .NET Framework 4+ (o instalador tenta instalar o .NET 4.0 se ele não estiver instalado).
+- Permissão para abrir o PowerShell em modo administrador.
 
-.NET Framework 4+ (a instalador vai tentar instalar o .NET 4.0 se não estiver instalado)
+## Instalação
 
-### Instalando o Chocolatey (Modo Administrador)
+### 1. Abra o PowerShell como administrador
 
-1. Primeiro tenha certeza que você pode utilizar o shell no modo administrador
+Pressione `Windows + X` e depois `A`, ou pesquise por PowerShell na barra do menu iniciar.
 
-2. Abra seu PowerShell pressionando `Windows + X` e depois `A` ou pesquise na barra do menu iniciar
+### 2. Libere a política de execução
 
-3. Instale com o powershell.exe
+O PowerShell vai baixar o script [install.ps1](https://community.chocolatey.org/install.ps1) e executá-lo na sua
+máquina. O script é *seguro*, mas vale a pena lê-lo antes para não ter dúvidas: é recomendado ter certeza de que
+qualquer script da internet que você não conheça é seguro. A equipe do Chocolatey leva a segurança muito a sério,
+[leia mais sobre os protocolos de segurança deles](https://chocolatey.org/security).
 
-> NOTA: Por favor, observe que o https://chocolatey.org/install.ps1 é *seguro*, seria interessante observá-lo para não ter dúvidas. O PowerShell vai baixar esse arquivo remotamente e executar na sua máquina, qualquer Script da internet que você não conheça é recomendado ter certeza que é seguro. Nós levamos muito a sério a segurança. [Leia mais sobre nossos protocolos de segurança](https://chocolatey.org/security).
+No PowerShell, tenha certeza de que a
+[política de execução](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)
+não está restrita. A sugestão é usar `Bypass` para desviar das políticas de segurança ou `AllSigned` para mais
+segurança.
 
-Com o PowerShell, tenha certeza que o comando [Get-ExecutionPolicy](https://go.microsoft.com/fwlink/?LinkID=135170) não está restrito. A sugestão é usar o `Bypass` para desviar das politicas de segurança ou `AllSigned` para mais segurança.
+```powershell
+Get-ExecutionPolicy
+```
 
-4. Execute o comando `Get-ExecutionPolicy`. se ele retornar `Restricted`, execute o comando `Set-ExecutionPolicy AllSigned` or `Set-ExecutionPolicy Bypass -Scope Process`. Senao apenas prossiga para o passo `5`
+Se o comando retornar `Restricted`, execute um dos comandos abaixo. Senão, apenas prossiga para o próximo passo.
 
-5. Copie e cole o seguinte comando no seu terminal:
+```powershell
+Set-ExecutionPolicy AllSigned
+```
 
-       Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process
+```
 
-6. Execute o comando apertando `Enter`
+### 3. Instale o Chocolatey
 
-7. Senão houver nenhum erro, você já pode utilizar o Chocolatey! escreva `choco` ou `choco -?` para utiliza-lo
+Copie e cole o seguinte comando no seu terminal e execute apertando `Enter`:
 
-8. Se quiser instalar algum pacote pesquise por [aqui](https://chocolatey.org/packages)
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
 
-## Links de suporte ( + detalhes )
+## Verificação
 
-[Instalando Chocolatey (site oficial em inglês)](https://chocolatey.org/docs/installation#non-administrative-install)
+Se não houver nenhum erro, você já pode utilizar o Chocolatey. Escreva `choco` ou `choco -?` para utilizá-lo:
 
-[Instalação em modo não-administrador (site oficial em inglês)](https://chocolatey.org/docs/installation#non-administrative-install)
+```powershell
+choco -?
+```
+
+Para instalar algum pacote, pesquise [aqui](https://community.chocolatey.org/packages).
+
+## Referências
+
+- [Instalação do Chocolatey (site oficial, em inglês)](https://chocolatey.org/docs/installation)
+- [Instalação em modo não administrador (site oficial, em inglês)](https://chocolatey.org/docs/installation#non-administrative-install)
+- [Pacotes do Chocolatey](https://community.chocolatey.org/packages)

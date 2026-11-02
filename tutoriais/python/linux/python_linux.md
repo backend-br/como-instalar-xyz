@@ -1,45 +1,76 @@
-## Instalar o Python no Linux
+# Python no Linux
 
-Para instalar Python 3 no Linux
+Python é uma linguagem de programação de uso geral. Este tutorial instala o Python 3 com o gerenciador de pacotes da sua
+distribuição Linux.
 
-Consulte primeiro se o Python já está instalado.
+## Requisitos
 
-    $ python --version
+- Um usuário com permissão para usar `sudo`.
 
-  ou
+## Instalação
 
-    $ python3 --version
+### 1. Verifique se o Python já está instalado
 
-#### Nota
-
-   `Se sua distribuição do Linux for fornecida com o Python, poderá ser necessário instalar o pacote do desenvolvedor 
-Python para ter os cabeçalhos. Use o gerenciador de pacote para instalar o pacote do desenvolvedor 
-(geralmente chamado python-dev ou python-devel).`
-
-   Se `Python 2.7` ou posterior não estiver instalado, instale Python com o gerenciador de pacote de distribuição. 
-O comando e o nome do pacote varia de acordo com a sua distribuição:
-
-     
-   *  No derivados do Debian, como Ubuntu, use `apt-get`. Verifique no repositório apt as versões do Python disponíveis para você. Depois, execute um comando semelhante ao seguinte, substituindo o nome do pacote correto:
-      ```sh
-        $ sudo apt-get install python3
-      ```
-   * No Red Hat e derivados, use `yum`. Verifique no repositório yum as versões do Python disponíveis para você. Depois, execute um comando semelhante ao seguinte, substituindo o nome do pacote correto:
-      ```sh
-        $ sudo yum install python36
-      ```
-   * No SUSE e derivados, use o `zypper`. Verifique no repositório as versões do Python disponíveis para você. Depois, execute um comando semelhante ao seguinte, substituindo o nome do pacote correto:
-      ```sh
-        $ sudo zypper install python3
-      ```
-   * No Arch Linux e derivados, use o `pacman`. Verifique no repositório as versões do Python disponíveis para você. Depois, execute um comando semelhante ao seguinte, substituindo o nome do pacote correto:
-      ```sh
-        $ sudo pacman -S python3 
-      ```
- Consulte a documentação do gerenciador de pacotes do sistema e do Python para obter mais informações sobre onde ele é instalado e como usá-lo.
-
- Abra um prompt de comando ou shell e execute o comando a seguir para verificar se o Python foi instalado corretamente.
-```sh
-    $ python3 --version
-    Python 3.7
+```bash
+python --version
 ```
+
+ou
+
+```bash
+python3 --version
+```
+
+Se a sua distribuição do Linux já vier com o Python, pode ser necessário instalar o pacote de desenvolvimento do Python
+para ter os cabeçalhos. Use o gerenciador de pacotes para instalar esse pacote (geralmente chamado `python-dev` ou
+`python-devel`).
+
+### 2. Instale o Python
+
+Se o Python 2.7 ou posterior não estiver instalado, instale o Python com o gerenciador de pacotes da sua distribuição. O
+comando e o nome do pacote variam de acordo com a distribuição. Verifique no repositório quais versões do Python estão
+disponíveis e execute um comando semelhante aos abaixo, substituindo pelo nome correto do pacote.
+
+Debian e derivados, como o Ubuntu, usam o `apt-get`:
+
+```bash
+sudo apt-get install python3
+```
+
+Red Hat e derivados usam o `yum`:
+
+```bash
+sudo yum install python36
+```
+
+SUSE e derivados usam o `zypper`:
+
+```bash
+sudo zypper install python3
+```
+
+Arch Linux e derivados usam o `pacman`:
+
+```bash
+sudo pacman -S python3
+```
+
+Consulte a documentação do gerenciador de pacotes do sistema e do Python para obter mais informações sobre onde ele é
+instalado e como usá-lo.
+
+## Verificação
+
+Abra um terminal e execute o comando a seguir para verificar se o Python foi instalado corretamente:
+
+```bash
+python3 --version
+```
+
+```text
+Python 3.7
+```
+
+## Referências
+
+- [Usando Python em plataformas Unix (documentação oficial)](https://docs.python.org/pt-br/3/using/unix.html)
+- [Downloads do Python](https://www.python.org/downloads/)

@@ -1,54 +1,81 @@
-# MongoDB
+# MongoDB no Ubuntu
 
-A instalação difere nas versões 16.04 e 18.04, portanto este tutorial segue as maneiras de instalação para ambas as versões.
+O MongoDB já está incluído nos repositórios de pacotes do Ubuntu, mas o repositório oficial do MongoDB fornece versões
+mais atualizadas e é a maneira recomendada de instalar o software. Este tutorial instala o MongoDB 4.0 pelo repositório
+oficial.
 
-O MongoDB já está incluído nos repositórios de pacotes do Ubuntu, mas o repositório oficial do MongoDB fornece versões mais atualizadas e é a maneira recomendada de instalar o software. Neste caso, instalaremos via repositório oficial.
+## Requisitos
 
-```shell
+- Ubuntu 18.04 (Bionic), 16.04 (Xenial) ou 14.04 (Trusty). A instalação difere entre essas versões, e o tutorial mostra
+  o comando de cada uma.
+- Um usuário com permissão para usar `sudo`.
+
+## Instalação
+
+### 1. Importe a chave do repositório
+
+```bash
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 ```
 
-Após a importação da chave você verá esse output no terminal:
+Após a importação da chave você verá esta saída no terminal:
 
-```shell
+```text
 gpg: Total number processed: 1
 gpg:               imported: 1  (RSA: 1)
 ```
 
-À seguir precisamos adicionar os detalhes do repositório para que o ```apt``` saiba de onde baixar os pacotes. Copie o comando correspondente à sua versão.
+### 2. Adicione o repositório
 
-### 18.04 (Bionic)
+Adicione os detalhes do repositório para que o `apt` saiba de onde baixar os pacotes. Copie o comando correspondente à
+sua versão.
 
-```shell
+Ubuntu 18.04 (Bionic):
+
+```bash
 echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 ```
 
-### 16.04 (Xenial)
-```shell
+Ubuntu 16.04 (Xenial):
+
+```bash
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 ```
 
-### 14.04 (Trusty)
-```shell
+Ubuntu 14.04 (Trusty):
+
+```bash
 echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 ```
 
+### 3. Instale o MongoDB
 
-Agora atualize a lista de pacotes:
+Atualize a lista de pacotes:
 
-```shell
+```bash
 sudo apt-get update
 ```
 
-E agora basta instalar o MongoDB via apt:
+Instale o MongoDB via apt:
 
-```shell
+```bash
 sudo apt-get install -y mongodb-org
 ```
 
-## Iniciando o MongoDB
+## Verificação
+
 Para verificar se a instalação ocorreu com sucesso, inicie o MongoDB:
 
-```shell
+```bash
 sudo service mongod start
 ```
+
+Confira também a versão instalada:
+
+```bash
+mongod --version
+```
+
+## Referências
+
+- [Instalação do MongoDB no Ubuntu (documentação oficial, em inglês)](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)

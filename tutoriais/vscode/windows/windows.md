@@ -1,33 +1,42 @@
-# Instalando o Visual Studio Code 2019 no Windows
+# Visual Studio Code no Windows
 
-# 1 - Download do Visual Studio Code:
+O Visual Studio Code (VS Code) é um editor de código feito pela Microsoft. Este tutorial instala o VS Code no Windows
+pelo instalador oficial.
 
-Sistemas compatéveis: Windows 7, 8 e 10 
+## Requisitos
+
+- Windows 7, 8 ou 10.
+
+## Instalação
+
+### 1. Baixe o Visual Studio Code
+
 Escolha a versão do sistema:
 
-a. [Efetuar download versão 64 bits](https://code.visualstudio.com/docs/?dv=win64user)
+- [Download da versão 64 bits](https://code.visualstudio.com/docs/?dv=win64user)
+- [Download da versão 32 bits](https://code.visualstudio.com/docs/?dv=win32user)
 
-b. [Efetuar download versão 32 bits](https://code.visualstudio.com/docs/?dv=win32user)
+### 2. Instale o Visual Studio Code
 
+1. Execute o arquivo baixado.
+2. Escolha o idioma durante a instalação ou deixe o padrão, inglês. Clique em _Ok_.
+3. Confirme os Termos de Licença e a Política de Privacidade da Microsoft. Clique em _Continue_.
+4. Escolha o diretório de instalação ou deixe o padrão. Clique em _Next_.
+5. Escolha se quer criar os atalhos no menu iniciar (por padrão eles serão criados). Clique em _Next_.
+6. Na próxima janela, deixe as opções pré-selecionadas. Clique em _Next_.
+7. Clique em _Install_ e aguarde a conclusão da instalação.
 
-# 2 - Instalando o Visual Studio Code
+## Verificação
 
-a. Execute o arquivo baixado.
+Abra um novo terminal e execute:
 
-b. Escolha o idioma durante a instalação ou por padrão deixe em  inglês. Clique em Ok.
+```powershell
+code --version
+```
 
-c. Confirme os Termos de Licença da Microsoft e da Política de Privacidade da Microsoft. Clique em Continue.
+A saída deve mostrar a versão do VS Code instalada.
 
-d. Escolha o diretório de instalação ou deixa o padrão. Clique em Next.
+## Referências
 
-e. Opção de criar os atalhos na menu iniciar, por padrão será criado. Clique em Next.
-
-f. Na proxima janela deixe as opções pre-selecionadas. Clique em Next.
-
-g. Clique em Install e aguarde a conclusão da instalação
-
-# Links de suporte ( + detalhes )
-
-a. [Instalando Visual Studio ( Site Oficial em inglês )](https://code.visualstudio.com/docs/setup/windows)
-
-b. [14 dicas para turbinar o seu Vs Code ( iMasters.com.br )](https://imasters.com.br/desenvolvimento/14-dicas-para-turbinar-o-seu-vs-code)
+- [Visual Studio Code no Windows (documentação oficial, em inglês)](https://code.visualstudio.com/docs/setup/windows)
+- [14 dicas para turbinar o seu VS Code (iMasters)](https://imasters.com.br/desenvolvimento/14-dicas-para-turbinar-o-seu-vs-code)

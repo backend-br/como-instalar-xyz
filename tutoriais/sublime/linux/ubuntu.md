@@ -1,27 +1,50 @@
-# Sublime
+# Sublime Text no Ubuntu
 
-Nesse tutorial você irá aprender como instalar a versão 3 do sublime via repositório oficial.
+O Sublime Text é um editor de texto para código. Este tutorial instala a versão 3 do Sublime Text pelo repositório
+oficial.
 
-Para começar a instalação do Sublime em seu Ubuntu você precisa baixar o arquivo GPG e o adicionaremos ao apt-key.
+## Requisitos
 
-```shell
+- Um usuário com permissão para usar `sudo`.
+
+## Instalação
+
+### 1. Adicione a chave GPG
+
+Baixe o arquivo GPG e adicione-o ao apt-key:
+
+```bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 ```
 
-Depois você precisa adicionar o repositório oficial do Sublime:
+### 2. Adicione o repositório oficial
 
-```shell
+```bash
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 ```
 
-Depois execute o comando abaixo para atualizar seus repositórios:
+### 3. Instale o Sublime Text
 
-```shell
+Atualize seus repositórios:
+
+```bash
 sudo apt-get update
 ```
 
-E logo em seguida execute o comando para instalar o Sublime-3
-```shell
+Em seguida, instale o Sublime Text:
+
+```bash
 sudo apt-get install sublime-text
 ```
-Tudo certo, agora você tem a o editor Sublime-text-3 em sua máquina.
+
+## Verificação
+
+```bash
+subl --version
+```
+
+A saída deve mostrar a versão do Sublime Text instalada.
+
+## Referências
+
+- [Repositórios Linux do Sublime Text (em inglês)](https://www.sublimetext.com/docs/linux_repositories.html)

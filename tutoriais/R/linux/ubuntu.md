@@ -1,18 +1,38 @@
-# Linguagem R
+# R no Ubuntu
 
-#### Para instalar o interpretador da linguagem R, podemos usar o seguint comando no terminal:
+R é uma linguagem de programação voltada para estatística e análise de dados. Este tutorial instala o interpretador da
+linguagem R pelo apt.
 
-```
+## Requisitos
+
+- Um usuário com permissão para usar `sudo`.
+
+## Instalação
+
+Para instalar o interpretador da linguagem R, use o seguinte comando no terminal:
+
+```bash
 sudo apt install r-base -y
 ```
 
-#### Explicando o comando:
-* 'sudo' eleva à super-usuario, o qual tem permissão de Root
-    
-* 'apt' é o gerenciador padrão das ditros Debian-like, cujo é o substituto do 'apt-get' com muito mais recursos.
+Explicando o comando:
 
-* 'install' comando para fazer a instalação propriamente dita.
+- `sudo` eleva o comando a superusuário, que tem permissão de root.
+- `apt` é o gerenciador de pacotes padrão das distribuições baseadas no Debian, substituto do `apt-get` com mais
+  recursos.
+- `install` é o comando que faz a instalação propriamente dita.
+- `r-base` é o nome do pacote a instalar, no caso, o interpretador R.
+- `-y` aceita as mudanças sem pedir confirmação durante a instalação, assim você pode ir tomar um café enquanto ela é
+  feita.
 
-* 'r-base' é o nome do que devemos instalar, no nosso caso vamos instalar o interpretador R
+## Verificação
 
-* '-y' é para que possamos aceitar as mudanças que seram feita sem precisar confirmar depois a instalação, podemos assim ir tomar um café enquanto está sendo feita a instalação :D
+```bash
+R --version
+```
+
+A saída deve mostrar a versão do R instalada.
+
+## Referências
+
+- [R para Ubuntu no CRAN (em inglês)](https://cran.r-project.org/bin/linux/ubuntu/)

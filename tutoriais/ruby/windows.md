@@ -1,93 +1,109 @@
+# Ruby no Windows
 
+Ruby é uma linguagem de programação dinâmica. Este tutorial instala o Ruby no Windows com o RubyInstaller ou com o
+Scoop.
 
-# Opção 1
+## Requisitos
+
+Para a opção 1 (RubyInstaller), nenhum. Para a opção 2 (Scoop):
+
+- [PowerShell 3](https://www.microsoft.com/en-us/download/details.aspx?id=34595).
+- [.NET Framework 4.5](https://dotnet.microsoft.com/download).
+
+## Instalação
+
+Escolha uma das duas opções abaixo.
+
+### Opção 1: RubyInstaller
 
 Faça o download do [RubyInstaller](https://rubyinstaller.org/). Escolha a opção de download **With DevKit**.
 
 Execute o instalador:
-* Mantenha o diretório padrão sugerido.
-* Marque as três opções disponíveis
 
-Ao terminar a copia de arquivos, clique em `finish`. Será aberto um terminal.
-* Clique 1 para a escolha padrão e tecle `Enter`.
-* Aguarde o processo terminar e tecle 'Enter' ao final.
+- Mantenha o diretório padrão sugerido.
+- Marque as três opções disponíveis.
 
-___
+Ao terminar a cópia de arquivos, clique em `Finish`. Será aberto um terminal:
 
-Para validar a instalação, abra o Prompt do Windows e digite:
-```shell
-ruby -v
-```
+- Digite `1` para a escolha padrão e tecle `Enter`.
+- Aguarde o processo terminar e tecle `Enter` ao final.
 
-Deverá ser exibido uma mensagem como esta, dependendo da versão instalada:
-```shell
-ruby 2.6.1p33 (2019-01-30 revision 66950) [x64-mingw32]
-```
+Opcionalmente, instale o Rails:
 
-Opcionalmente você pode instalar o Rails:
-```shell
+```bat
 gem install rails --no-document
 ```
-# Opção 2
 
-Requisitos:
-* [PowerShell 3](https://www.microsoft.com/en-us/download/details.aspx?id=34595)
-* [NET Framework 4.5](https://www.microsoft.com/net/download)
+### Opção 2: Scoop
 
-Se os requisitos atendem, segure a tecla Windows e a tecla R juntas. Na janela que se abre, digite `powershell` e aperte a tecla ENTER.
+Segure a tecla Windows e a tecla R juntas. Na janela que se abre, digite `powershell` e aperte `Enter`.
 
-Cole o seguinte código e aperte ENTER.
+Cole o seguinte código e aperte `Enter`:
 
-```shell
+```powershell
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser -force ; iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 ```
 
-Se tudo ocorreu bem, você já está apto para instalar o ruby com o comando:
+Se tudo ocorreu bem, instale o Ruby com o comando:
 
-```shell
+```powershell
 scoop install ruby
 ```
 
-Neste momento, para confirmar que ruby está instalado e funcionando, podemos executar o comando `ruby -v`.
+Para instalar mais versões do Ruby ou de qualquer outro programa, instale antes mais duas dependências:
 
-Se nada acontecer, recomendo fechar o Prompt do Windows e abrir novamente.
-
-Para instalar mais versões do ruby ou de qualquer outro programa, devemos instalar antes mais duas dependências:
-
-```shell
+```powershell
 scoop install git
 scoop bucket add versions
 ```
 
-e finalmente, para instalar outras versões, usamos o comando:
+Em seguida, para instalar outras versões, use o comando:
 
-```shell
+```powershell
 scoop install ruby19 ruby24 ruby25
 ```
 
 Para trocar de versão, use `scoop reset <programa com outra versão>`. Para trocar para a versão 2.4.5, por exemplo:
 
-```shell
+```powershell
 scoop reset ruby24
 ```
 
 Feche o Prompt do Windows e abra novamente para aceitar as mudanças.
 
----
+É recomendável instalar também o `msys2` para garantir suporte a gems compiladas em linguagem C. Caso queira fazê-lo,
+atualize o ambiente fechando e abrindo o Prompt do Windows e use o seguinte comando:
 
-O tutorial acaba por aqui, mas é recomendável instalar o `msys2` para garantir suporte à gems compiladas em linguagem C.
-
-Caso queira fazê-lo, atualize o ambiente, fechando e abrindo o Prompt do Windows e usando o seguintes comandos:
-
-```shell
+```powershell
 scoop install msys2
 ```
-e em seguida `msys2`.
 
-Atualize o ambiente, use o comando `ridk install` e atualize o ambiente novamente.
+Em seguida, execute `msys2`. Atualize o ambiente, use o comando `ridk install` e atualize o ambiente novamente.
 
-Opcionalmente você pode instalar o Rails:
+Opcionalmente, instale o Rails:
 
-```shell
+```powershell
 gem install rails
 ```
+
+## Verificação
+
+Abra o Prompt do Windows e digite:
+
+```bat
+ruby -v
+```
+
+Deverá ser exibida uma mensagem como esta, dependendo da versão instalada:
+
+```text
+ruby 2.6.1p33 (2019-01-30 revision 66950) [x64-mingw32]
+```
+
+Se nada acontecer, feche o Prompt do Windows e abra novamente.
+
+## Referências
+
+- [RubyInstaller](https://rubyinstaller.org/)
+- [Scoop](https://scoop.sh/)
+- [Instalando o Ruby (documentação oficial)](https://www.ruby-lang.org/pt/documentation/installation/)

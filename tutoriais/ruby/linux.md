@@ -1,10 +1,19 @@
-# Ruby
+# Ruby no Linux
 
-Procedimento válido independente da Distribuição do Linux.
+Ruby é uma linguagem de programação dinâmica. Este tutorial instala o Ruby com o [RVM](https://rvm.io/rvm/install)
+(Ruby Version Manager), que permite ter mais de uma versão do Ruby instalada, e vale para qualquer distribuição Linux.
 
-Primeiro tenha certeza que o sistema esta atualizado:
+## Requisitos
 
-```shell
+- Um usuário com permissão para usar `sudo`.
+
+## Instalação
+
+### 1. Atualize o sistema
+
+Primeiro, tenha certeza de que o sistema está atualizado:
+
+```bash
 # Debian ou Ubuntu
 sudo apt-get update
 sudo apt-get upgrade
@@ -16,50 +25,59 @@ yum update
 pacman -Syu
 ```
 
-Utilizando o [RVM](https://rvm.io/rvm/install) (Ruby Version Manager) é possível termos mais de uma versão do Ruby instalada.
+### 2. Instale o RVM
 
-Para instalar o RVM execute os comandos abaixo:
+Importe as chaves GPG:
 
-GPG keys
-```shell
+```bash
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 ```
 
-Instalando a versão estável.
-```shell
-\curl -sSL https://get.rvm.io | bash -s stable 
+Instale a versão estável:
+
+```bash
+\curl -sSL https://get.rvm.io | bash -s stable
 ```
 
-Para recarregar o path
-```shell
+Recarregue o PATH:
+
+```bash
 source /etc/profile
 ```
 
-Validando
-```shell
+Valide a instalação do RVM:
+
+```bash
 rvm -v
 ```
 
-Você verá uma mensagem similar a essa, dependendo da versão disponível.
-```shell
+Você verá uma mensagem similar a esta, dependendo da versão disponível:
+
+```text
 rvm 1.29.7-next (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
 ```
-___
 
-Instalando uma versão do Ruby. 
-```shell
+### 3. Instale uma versão do Ruby
+
+```bash
 rvm install ruby-2.6.0
 ```
 
-Para instalar outras versões, primeiro verifique as versões disponíveis com o comando: `rvm list known`.
+Para instalar outras versões, primeiro verifique as versões disponíveis com o comando `rvm list known`.
 
-Verifique a instalação com:
-```shell
+## Verificação
+
+```bash
 ruby -v
 ```
 
-Você verá uma mensagem similar a essa, dependendo da versão instalada.
-```shell
+Você verá uma mensagem similar a esta, dependendo da versão instalada:
+
+```text
 ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
 ```
 
+## Referências
+
+- [Instalação do RVM (em inglês)](https://rvm.io/rvm/install)
+- [Instalando o Ruby (documentação oficial)](https://www.ruby-lang.org/pt/documentation/installation/)
