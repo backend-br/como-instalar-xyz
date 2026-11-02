@@ -1,34 +1,41 @@
-# JDK 11
+# Java no Windows
 
+A instalação do JDK no Windows é bem simples. Este tutorial mostra os passos necessários para instalar o JDK 11 e
+configurar a variável de ambiente `JAVA_HOME`.
 
-A instalação do JDK no windows é bem simples, este tutorial lhe mostrará os passos 
-nescessário.
+## Requisitos
 
-Primeiramente acesse o link a seguir para baixar o instalador do JDK 11. 
+Nenhum.
 
-[JDK 11](https://www.oracle.com/java/technologies/downloads/) 
+## Instalação
 
-Aceite a licença e escolha o arquivo com extensão .exe. 
+### 1. Baixe e execute o instalador
 
-Após a conclussão do download execute o instalador - basicamente clicar em next - e anote o diretório de instalação, precisaremos para configurar a variável de ambiente JAVA_HOME. 
+Acesse a [página de downloads do Java](https://www.oracle.com/java/technologies/downloads/) e baixe o instalador do
+JDK 11. Aceite a licença e escolha o arquivo com extensão `.exe`.
 
+Após a conclusão do download, execute o instalador (basicamente clicar em _Next_) e anote o diretório de instalação, que
+será usado para configurar a variável de ambiente `JAVA_HOME`.
 
-# Variável de ambiente JAVA_HOME
+### 2. Configure a variável de ambiente JAVA_HOME
 
+1. Acesse **Painel de Controle** -> **Sistema e Segurança** -> **Sistema**.
+2. No menu lateral à esquerda, clique em **Configurações avançadas do sistema**.
+3. Clique em **Variáveis de Ambiente** e, na parte de baixo, em **Variáveis do sistema**, clique em **Novo...**.
+4. Em **Nome da variável** digite **JAVA_HOME** e em **Valor da variável** digite o diretório da instalação do JDK,
+   parecido com **C:\Program Files\Java\jdk-11.0.9**. Para finalizar, clique em **OK** em todas as janelas abertas.
 
-1. Acesse o **Painel de Controle** -> **Sistema e Segurança** - >  **Sistema**
+## Verificação
 
-2. No meu lateral a esquerda, clique em **Configurações avançadas do sistema**.
+Abra o CMD e digite:
 
-3. Clique na parte inferior em **Variáveis de Ambiente** na parte de baixo **Variáveis do sistema** clique em **Novo..**.
+```bat
+java -version
+```
 
-4. Em **Nome da variável** digite **JAVA_HOME**, em **Valor da variável** digite o diretório da instalação do JDK. Parecido com esse **C:\Program Files\Java\jdk-11.0.9** para finalizar clique em **ok** em todas janelas abertas.
+Se aparecer `java version "11.0.9"`, a instalação e a configuração da variável de ambiente foram feitas corretamente.
 
+## Referências
 
-# Verificando a instalação
-
-Abra o CMD e digite: **java -version** se aparecer: **java version: 11.0.9**, a instalação e configuração da variável de ambiente foi feita corretamente.
-
-
-
-
+- [Downloads do Java (Oracle)](https://www.oracle.com/java/technologies/downloads/)
+- [Instalação do JDK 11 no Windows (documentação oficial, em inglês)](https://docs.oracle.com/en/java/javase/11/install/installation-jdk-microsoft-windows-platforms.html)

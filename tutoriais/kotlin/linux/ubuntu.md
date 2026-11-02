@@ -1,30 +1,47 @@
-# Kotlin
+# Kotlin no Ubuntu
 
-É necessário instalar o [Java](../../java/linux/ubuntu.md) primeiro.
+Kotlin é uma linguagem de programação que roda na JVM. Este tutorial instala o compilador de linha de comando do Kotlin
+pelo `snap`.
 
-Verifique a instalação do `snap`. Para quem estiver usando o Ubuntu 18.04 ou superior, o snap vem instalado por padrão.
+## Requisitos
 
-```shell
+- [Java](../../java/linux/ubuntu.md) instalado.
+- Um usuário com permissão para usar `sudo`.
+
+## Instalação
+
+### 1. Verifique o snap
+
+Para quem usa o Ubuntu 18.04 ou superior, o `snap` vem instalado por padrão. Verifique a instalação:
+
+```bash
 snap version
 ```
 
-Em caso negativo, faça a instalação do snap:
-```shell
+Caso ele não esteja instalado, instale o snap:
+
+```bash
 sudo apt-get install -y snapd
 ```
-___
 
-Para quem já possui o snap apenas execute:
-```shell
-sudo snap install kotlin --clasic
+### 2. Instale o Kotlin
+
+```bash
+sudo snap install kotlin --classic
 ```
 
-Validando:
-```shell
+## Verificação
+
+```bash
 kotlin -version
 ```
 
 Exemplo de resultado:
-```
+
+```text
 Kotlin version 1.2.51-release-125 (JRE 1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12)
 ```
+
+## Referências
+
+- [Compilador de linha de comando do Kotlin (em inglês)](https://kotlinlang.org/docs/command-line.html)

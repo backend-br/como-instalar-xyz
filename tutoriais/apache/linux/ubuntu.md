@@ -1,43 +1,43 @@
-# Apache
+# Apache no Ubuntu
 
-O servidor HTTP Apache é o servidor da Web mais usado no mundo. Ele fornece muitos recursos poderosos, incluindo módulos dinamicamente carregáveis, suporte de mídia robusto e ampla integração com outros softwares populares.
+O servidor HTTP Apache é o servidor web mais usado no mundo. Ele oferece muitos recursos poderosos, incluindo módulos
+carregáveis dinamicamente, suporte robusto a mídia e ampla integração com outros softwares populares.
 
-Instalar o Apache no Ubuntu é bem simples.
+## Requisitos
 
-## Pré-requisitos
+- Um servidor Ubuntu com um usuário comum (não root) com privilégios `sudo`.
+- Um firewall básico ativo para bloquear portas não essenciais.
 
-Antes de começar este guia, você deve ter o seguinte:
-
-- Um servidor Ubuntu e um usuário normal não-root com privilégios sudo. Além disso, você precisará ativar um firewall básico para bloquear portas não essenciais.
-
-Quando você tiver uma conta disponível, faça login como seu usuário não root para começar.
+Quando tiver essa conta disponível, faça login com o usuário não root para começar.
 
 ## Instalação
 
-1. Instalando o Apache
+### 1. Instale o Apache
 
-O Apache está disponível nos repositórios de software padrão do Ubuntu, para que você possa instalá-lo usando ferramentas convencionais de gerenciamento de pacotes.
+O Apache está disponível nos repositórios de software padrão do Ubuntu, então você pode instalá-lo com as ferramentas
+convencionais de gerenciamento de pacotes.
 
-Atualize seu índice de pacotes local:
+Atualize o índice de pacotes local:
 
-```shell
-$ sudo apt update
-```
-Instale o pacote apache2:
-
-```shell
-$ sudo apt install apache2
-```
-2. Ajustando o Firewall
-   
-Verifique os perfis de aplicativos disponíveis do **ufw**:
-
-```shell
-$ sudo ufw app list
+```bash
+sudo apt update
 ```
 
-```shell
-Output
+Instale o pacote `apache2`:
+
+```bash
+sudo apt install apache2
+```
+
+### 2. Ajuste o firewall
+
+Verifique os perfis de aplicativos disponíveis no `ufw`:
+
+```bash
+sudo ufw app list
+```
+
+```text
 Available applications:
   Apache
   Apache Full
@@ -45,39 +45,39 @@ Available applications:
   OpenSSH
 ```
 
-Vamos ativar o perfil mais restritivo que ainda permitirá o tráfego que você configurou, permitindo o tráfego na porta 80 (tráfego normal da web não criptografado):
+Ative o perfil mais restritivo que ainda permite o tráfego necessário, liberando a porta 80 (tráfego web normal, não
+criptografado):
 
-```shell
-$ sudo ufw allow 'Apache'
+```bash
+sudo ufw allow 'Apache'
 ```
 
-Verifique as mudança:
+Verifique a mudança:
 
-```shell
-$ sudo ufw status
+```bash
+sudo ufw status
 ```
-```shell
-Output
+
+```text
 Status: active
 
 To                         Action      From
 --                         ------      ----
-OpenSSH                    ALLOW       Anywhere                  
-Apache                     ALLOW       Anywhere                  
-OpenSSH (v6)               ALLOW       Anywhere (v6)             
+OpenSSH                    ALLOW       Anywhere
+Apache                     ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
 Apache (v6)                ALLOW       Anywhere (v6)
 ```
 
-3. Verificando seu servidor da web
+## Verificação
 
-Verifique com o sistema init systemd para certificar-se de que o serviço está sendo executado digitando:
+Confirme no systemd que o serviço está em execução:
 
-```shell
-$ sudo systemctl status apache2
+```bash
+sudo systemctl status apache2
 ```
 
-```shell
-Output
+```text
 ● apache2.service - The Apache HTTP Server
    Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
   Drop-In: /lib/systemd/system/apache2.service.d
@@ -90,9 +90,16 @@ Output
            ├─2585 /usr/sbin/apache2 -k start
            └─2586 /usr/sbin/apache2 -k start
 ```
-Acesse a página inicial padrão do Apache para confirmar que o software está sendo executado corretamente por meio do seu endereço IP:
 
-```
+Acesse a página inicial padrão do Apache pelo endereço IP do servidor para confirmar que o software está funcionando
+corretamente:
+
+```text
 http://localhost
 ```
-Você deverá ver a página padrão do Apache do Ubuntu.
+
+Você deverá ver a página padrão do Apache no Ubuntu.
+
+## Referências
+
+- [Documentação oficial do Apache HTTP Server](https://httpd.apache.org/docs/)

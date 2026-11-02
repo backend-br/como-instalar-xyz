@@ -1,39 +1,69 @@
-# PostgreSQL
+# PostgreSQL no Arch Linux
 
-A melhor forma de instalar o PostgreSQL no Arch Linux é atráves do gerenciador de pacotes [pacman](https://wiki.archlinux.org/title/Pacman_(Portugu%C3%AAs)), que é o gerenciador de pacotes padrão para instalação pacotes dos repositórios oficiais.
+A melhor forma de instalar o PostgreSQL no Arch Linux é através do
+[pacman](https://wiki.archlinux.org/title/Pacman_(Portugu%C3%AAs)), o gerenciador de pacotes padrão para instalar
+pacotes dos repositórios oficiais.
 
-Para isso, basta executar:
+## Requisitos
 
-```shell
+- Um usuário com permissão para usar `sudo`.
+
+## Instalação
+
+### 1. Instale o PostgreSQL
+
+```bash
 sudo pacman -Sy postgresql
 ```
 
-Após a instalação é preciso acessar o usuário `postgres` e incializar as configurações padrão do PostgreSQL. Para isso, execute os seguintes comandos:
+### 2. Inicialize as configurações padrão
 
-```shell
+Após a instalação, acesse o usuário `postgres` e inicialize as configurações padrão do PostgreSQL:
+
+```bash
 sudo -iu postgres
 initdb -D /var/lib/postgres/data
 ```
 
-Como por padrão o usuário postgres não tem nenhuma senha configurada, precisamos adicionar uma, já que em alguns frameworks é preciso fazer alguma configuração extra para aceitar senhas vazias.
+### 3. Defina uma senha para o usuário postgres
 
-Ainda logado no usuário do postgres, execute os seguintes comandos, entrando com sua senhas em seguida:
+Por padrão o usuário `postgres` não tem senha configurada. É preciso adicionar uma, já que alguns frameworks exigem
+configuração extra para aceitar senhas vazias.
 
-```shell
+Ainda logado no usuário `postgres`, execute os comandos abaixo e digite sua senha em seguida:
+
+```bash
 psql
-\passwd
+\password
 ```
 
-Agora basta ativar o serviço do PostgreSQL na incialização do sistema:
+### 4. Ative o serviço na inicialização do sistema
 
-```shell
+```bash
 sudo systemctl enable postgresql
 ```
 
-Bônus: o [pgAdmin](https://www.pgadmin.org/) não é instalado por padrão, então precisamos instalá-lo executando:
+### 5. Instale o pgAdmin (opcional)
 
-```shell
+O [pgAdmin](https://www.pgadmin.org/) não é instalado por padrão. Para instalá-lo, execute:
+
+```bash
 sudo pacman -S pgadmin4
 ```
 
-Pronto! Como o Arch Linux é uma distribuição do tipo [rolling release](https://pt.wikipedia.org/wiki/Rolling_release), você terá sempre instalado as versões mais recentes disponíveis do `PostgreSQL` e do `pgAdmin`.
+Como o Arch Linux é uma distribuição do tipo [rolling release](https://pt.wikipedia.org/wiki/Rolling_release), você terá
+sempre as versões mais recentes disponíveis do PostgreSQL e do pgAdmin.
+
+## Verificação
+
+```bash
+psql --version
+```
+
+A saída deve mostrar a versão do PostgreSQL instalada.
+
+## Referências
+
+- [PostgreSQL na wiki do Arch Linux](https://wiki.archlinux.org/title/PostgreSQL)
+- [Pacman na wiki do Arch Linux](https://wiki.archlinux.org/title/Pacman_(Portugu%C3%AAs))
+- [pgAdmin](https://www.pgadmin.org/)

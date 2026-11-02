@@ -1,47 +1,64 @@
-# VSCode
+# Visual Studio Code no Ubuntu
 
-# Instalando via DPKG
-Para instalar o VSCode no ubuntu você pode baixar o arquivo diretamente do [link](https://code.visualstudio.com/Download)
+O Visual Studio Code (VS Code) é um editor de código feito pela Microsoft. Este tutorial instala o VS Code pelo pacote
+`.deb` ou pelo repositório da Microsoft, que entrega as atualizações pelo apt.
 
-Ao terminar de baixar você pode executar diretamente clicando duas vezes ou executando o comando:
+## Requisitos
 
-```code
+- Um usuário com permissão para usar `sudo`.
+- `curl` instalado, para a instalação via terminal.
+
+## Instalação
+
+Escolha uma das duas opções abaixo.
+
+### Opção 1: pacote .deb
+
+Baixe o arquivo `.deb` na [página de download](https://code.visualstudio.com/Download). Ao terminar o download, execute o
+arquivo com um clique duplo ou com o comando:
+
+```bash
 sudo dpkg -i diretorio.dpkg
 ```
 
-Logo em seguida você terá o VSCode instalado em sua máquina.
+### Opção 2: repositório pelo terminal
 
-# Instalando via terminal
+Faça toda a instalação de preferência em um **único diretório**, como o **Downloads**.
 
-Para instalar o VSCode via terminal obtendo as atualizações pelo o repositório basta seguir os passos abaixos.
+1. Baixe a chave de segurança usada pelo GnuPG ("GNU Privacy Guard") para verificar os pacotes:
 
-**Obs**: Será necessário ter instalado o "CURL" para concluir a instalação via terminal e toda a instalação de preferência deve ser feita em um **único diretorio**, aconselho o **Download**.
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+   ```
 
+2. Adicione esse arquivo à sua lista de chaves GPG confiáveis:
 
-1. Você precisa baixar uma chave de segurança para encryptar e decryptar arquivos gerados por GnuPG "GNU Privacy Guard".
+   ```bash
+   sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+   ```
 
-```code
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+3. Adicione o repositório à sua lista de repositórios:
+
+   ```bash
+   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+   ```
+
+4. Execute os comandos abaixo para concluir a instalação:
+
+   ```bash
+   sudo apt-get install apt-transport-https
+   sudo apt-get update
+   sudo apt-get install code # or code-insiders
+   ```
+
+## Verificação
+
+```bash
+code --version
 ```
 
-2° Logo sem seguida você deve adicionar esse arquivo na sua lista de gpg confiaveis.
+A saída deve mostrar a versão do VS Code instalada.
 
-```code
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-```
+## Referências
 
-3° Adicione o repositório na sua lista de repositórios.
-
-```code
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-```
-
-4° E para finalizar basta executar os comandos abaixos para concluir a instalação
-
-```code
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install code # or code-insiders
-```
-
-Agora é só curtir o seu VSCode.
+- [Visual Studio Code no Linux (documentação oficial, em inglês)](https://code.visualstudio.com/docs/setup/linux)

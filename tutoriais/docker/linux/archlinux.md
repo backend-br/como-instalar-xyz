@@ -1,51 +1,69 @@
-# Docker Arch Linux
+# Docker no Arch Linux
 
-Com alguns comandos simples você consegue instalar o Docker na sua máquina, a forma mais fácil é utilizando o [pacman](https://wiki.archlinux.org/title/Pacman), gerenciador de pacotes nativo do Arch Linux.
+Com alguns comandos simples você consegue instalar o Docker na sua máquina. A forma mais fácil é utilizando o
+[pacman](https://wiki.archlinux.org/title/Pacman), gerenciador de pacotes nativo do Arch Linux.
 
-## Removendo versão antiga
+## Requisitos
 
-Antes de começar verifique se você já possui uma versão do Docker instalada (`docker version`), caso possua, você precisa remover essa instalação antes de prosseguir.
+- Um usuário com permissão para usar `sudo`.
 
-```bash
-$ sudo pacman -R docker --recursive
-```
+## Instalação
 
-## Instalando Docker
+### 1. Remova versões antigas
 
-Para instalar o [Docker no Arch Linux](https://wiki.archlinux.org/title/Docker#Installation) basta executar o comando abaixo:
-
-```bash
-$ sudo pacman -S docker
-```
-
-Pronto, você já possui a última versão do Docker instalada, para verificar sua instalação execute `docker version`.
-
-Mas ainda precisamos configurar algumas coisas para facilitar o seu uso no dia dia.
-
-### 1. Permissões
-
-Para executar `docker` sem utilizar `sudo` você precisa adicionar seu usuário ao grupo de permissões do Docker.
+Antes de começar, verifique se você já possui uma versão do Docker instalada (`docker version`). Caso possua, remova
+essa instalação antes de prosseguir:
 
 ```bash
-$ sudo usermod -aG docker $USER
+sudo pacman -R docker --recursive
 ```
 
-Depois disso basta reiniciar sua máquina ou refazer o login na sua sessão ;)
+### 2. Instale o Docker
 
-### 2. Iniciando o Docker
-
-Antes de começar a utilizar o Docker você precisa iniciar o _service_ dele.
+Para instalar o [Docker no Arch Linux](https://wiki.archlinux.org/title/Docker#Installation), execute o comando abaixo:
 
 ```bash
-$ sudo systemctl start docker
+sudo pacman -S docker
 ```
 
-Você também pode configurar para que o Docker seja iniciado no momento de _boot_ do seu sistema, para isso basta executar:
+Pronto, você já possui a última versão do Docker instalada. Ainda é preciso configurar algumas coisas para facilitar o
+uso no dia a dia.
+
+### 3. Configure as permissões
+
+Para executar `docker` sem utilizar `sudo`, adicione seu usuário ao grupo de permissões do Docker:
 
 ```bash
-$ sudo systemctl enable docker
+sudo usermod -aG docker $USER
 ```
 
-Pronto, com o _service_ iniciado você já pode criar suas imagens e subir seus containers.
+Depois disso, reinicie sua máquina ou refaça o login na sua sessão.
 
-Caso você tenha alguma dúvida ou problema durante a instalação, da uma olhada na [documentação oficial](https://wiki.archlinux.org/title/Docker) ;)
+### 4. Inicie o Docker
+
+Antes de começar a utilizar o Docker, inicie o _service_ dele:
+
+```bash
+sudo systemctl start docker
+```
+
+Você também pode configurar o Docker para ser iniciado no _boot_ do sistema:
+
+```bash
+sudo systemctl enable docker
+```
+
+Com o _service_ iniciado, você já pode criar suas imagens e subir seus containers.
+
+## Verificação
+
+```bash
+docker version
+```
+
+A saída deve mostrar a versão do cliente e do servidor do Docker.
+
+## Referências
+
+- [Docker na wiki do Arch Linux](https://wiki.archlinux.org/title/Docker)
+- [Pacman na wiki do Arch Linux](https://wiki.archlinux.org/title/Pacman)
