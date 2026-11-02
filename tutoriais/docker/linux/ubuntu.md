@@ -50,7 +50,7 @@ sudo apt-get install docker-ce
 Para usar o Docker sem a necessidade do `sudo`, utilize este comando:
 
 ```bash
-sudo useradd -g docker ${USER}
+sudo usermod -aG docker ${USER}
 ```
 
 ### 7. Instale o docker-compose
@@ -74,7 +74,7 @@ sudo apt-key fingerprint 0EBFCD88
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt-get update
 sudo apt-get install docker-ce
-sudo useradd -g docker ${USER}
+sudo usermod -aG docker ${USER}
 ```
 
 ## Verificação

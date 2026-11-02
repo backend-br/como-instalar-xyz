@@ -10,7 +10,7 @@ A Apple avisou que, em novas versões do sistema, muitas das ferramentas de dese
 - [Homebrew](https://brew.sh/). Para instalar, digite no terminal:
 
 ```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ## Instalação
