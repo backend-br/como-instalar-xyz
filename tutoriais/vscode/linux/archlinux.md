@@ -1,13 +1,12 @@
 # Visual Studio Code no Arch Linux
 
-O Visual Studio Code (VS Code) é um editor de código feito pela Microsoft. Este tutorial instala o VS Code pelo pacman
-ou manualmente, a partir do pacote `tar.gz`.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala o VS Code pelo pacman ou manualmente, a partir do pacote `tar.gz`.
 
 Escolha uma das duas opções abaixo.
 

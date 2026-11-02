@@ -1,7 +1,5 @@
 # Chocolatey no Windows
 
-O Chocolatey é um gerenciador de pacotes para Windows. Este tutorial instala o Chocolatey em modo administrador.
-
 ## Requisitos
 
 - Windows 7+ ou Windows Server 2003+.
@@ -10,6 +8,8 @@ O Chocolatey é um gerenciador de pacotes para Windows. Este tutorial instala o 
 - Permissão para abrir o PowerShell em modo administrador.
 
 ## Instalação
+
+Este tutorial instala o Chocolatey em modo administrador.
 
 ### 1. Abra o PowerShell como administrador
 

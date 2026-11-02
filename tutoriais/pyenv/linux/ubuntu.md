@@ -1,7 +1,5 @@
 # Pyenv no Ubuntu
 
-O Pyenv permite alternar entre múltiplas versões de Python de maneira simples e rápida.
-
 ## Requisitos
 
 - Git instalado.

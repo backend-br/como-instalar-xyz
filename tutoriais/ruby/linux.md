@@ -1,13 +1,13 @@
 # Ruby no Linux
 
-Ruby é uma linguagem de programação dinâmica. Este tutorial instala o Ruby com o [RVM](https://rvm.io/rvm/install)
-(Ruby Version Manager), que permite ter mais de uma versão do Ruby instalada, e vale para qualquer distribuição Linux.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala o Ruby com o [RVM](https://rvm.io/rvm/install) (Ruby Version Manager), que permite ter mais de uma
+versão do Ruby instalada, e vale para qualquer distribuição Linux.
 
 ### 1. Atualize o sistema
 

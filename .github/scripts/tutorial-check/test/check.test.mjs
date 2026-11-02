@@ -13,7 +13,6 @@ const tutorialWith = ({
   [
     title,
     '',
-    'Instala o Docker.',
     ...sections.flatMap((section) => {
       const body = { Instalação: installation, Referências: references }[section] ?? ['Nenhum.']
 
@@ -24,8 +23,14 @@ const tutorialWith = ({
 
 const repositoryWith = (entries) => new Map(Object.entries(entries))
 
+const TOOL_README = '# Docker\n\nPlataforma de containers.\n\n## Tutoriais\n\n- [Ubuntu](./linux/ubuntu.md)\n'
+
 const validRepository = (tutorial = tutorialWith()) =>
-  repositoryWith({ 'README.md': `[Ubuntu](${TUTORIAL})`, [TUTORIAL]: tutorial })
+  repositoryWith({
+    'README.md': `[Ubuntu](${TUTORIAL})`,
+    'tutoriais/docker/README.md': TOOL_README,
+    [TUTORIAL]: tutorial,
+  })
 
 const messagesOf = (problems) => problems.map((problem) => problem.message)
 
@@ -157,7 +162,7 @@ test('reports a code fence without a language', () => {
   const problems = checkRepository(files)
 
   // Then the fence is reported with its line
-  assert.deepEqual(messagesOf(problems), ['code block without a language (line 11)'])
+  assert.deepEqual(messagesOf(problems), ['code block without a language (line 10)'])
 })
 
 test('reports a bare URL in the references', () => {
@@ -214,6 +219,7 @@ test('reports a README link to a file that does not exist', () => {
   // Given a README that links to a tutorial that is missing
   const files = repositoryWith({
     'README.md': `[Ubuntu](${TUTORIAL}) [Arch Linux](tutoriais/docker/linux/archlinux.md)`,
+    'tutoriais/docker/README.md': TOOL_README,
     [TUTORIAL]: tutorialWith(),
   })
 
@@ -230,6 +236,7 @@ test('accepts a link to an existing directory', () => {
   // Given a README that links to the directory of a tool
   const files = repositoryWith({
     'README.md': `[Ubuntu](${TUTORIAL}) [Docker](tutoriais/docker)`,
+    'tutoriais/docker/README.md': TOOL_README,
     [TUTORIAL]: tutorialWith(),
   })
 
@@ -240,16 +247,59 @@ test('accepts a link to an existing directory', () => {
   assert.deepEqual(problems, [])
 })
 
-test('reports a tutorial that no README links to', () => {
-  // Given a tutorial that is not linked from the README nor from its tool README
-  const files = repositoryWith({ 'README.md': '# Como instalar XYZ', [TUTORIAL]: tutorialWith() })
+test('reports a tutorial its tool README does not link to', () => {
+  // Given a tool README that does not list the tutorial
+  const files = repositoryWith({
+    'README.md': `[Ubuntu](${TUTORIAL})`,
+    'tutoriais/docker/README.md': '# Docker\n\nPlataforma de containers.\n\n## Tutoriais\n',
+    [TUTORIAL]: tutorialWith(),
+  })
 
   // When the repository is checked
   const problems = checkRepository(files)
 
   // Then the tutorial is reported
+  assert.deepEqual(problems, [{ path: TUTORIAL, message: 'tutorial not linked from tutoriais/docker/README.md' }])
+})
+
+test('reports a tutorial whose tool has no README', () => {
+  // Given a tutorial without the README of its tool
+  const files = repositoryWith({ 'README.md': `[Ubuntu](${TUTORIAL})`, [TUTORIAL]: tutorialWith() })
+
+  // When the repository is checked
+  const problems = checkRepository(files)
+
+  // Then the missing tool README is reported
+  assert.deepEqual(problems, [{ path: TUTORIAL, message: 'tool README tutoriais/docker/README.md does not exist' }])
+})
+
+test('reports text between the title and the first section', () => {
+  // Given a tutorial that describes the tool under its title
+  const files = validRepository(tutorialWith({ title: '# Docker no Ubuntu\n\nO Docker cria containers.' }))
+
+  // When the repository is checked
+  const problems = checkRepository(files)
+
+  // Then the description is reported, pointing at the tool README
+  assert.deepEqual(messagesOf(problems), [
+    'text between the title and the first section, describe the tool in tutoriais/docker/README.md (line 3)',
+  ])
+})
+
+test('reports a tool README without a description', () => {
+  // Given a tool README with only its title and its tutorials
+  const files = repositoryWith({
+    'README.md': `[Ubuntu](${TUTORIAL})`,
+    'tutoriais/docker/README.md': '# Docker\n\n## Tutoriais\n\n- [Ubuntu](./linux/ubuntu.md)\n',
+    [TUTORIAL]: tutorialWith(),
+  })
+
+  // When the repository is checked
+  const problems = checkRepository(files)
+
+  // Then the missing description is reported
   assert.deepEqual(problems, [
-    { path: TUTORIAL, message: 'tutorial not linked from README.md or tutoriais/docker/README.md' },
+    { path: 'tutoriais/docker/README.md', message: 'the tool README is missing the description under its title' },
   ])
 })
 
@@ -257,7 +307,7 @@ test('accepts a tutorial linked only from its tool README', () => {
   // Given a tutorial linked from its tool README, which the README links to
   const files = repositoryWith({
     'README.md': '[Ubuntu](tutoriais/docker/README.md)',
-    'tutoriais/docker/README.md': '# Docker\n\n## Tutoriais\n\n- [Ubuntu](./linux/ubuntu.md)\n',
+    'tutoriais/docker/README.md': TOOL_README,
     [TUTORIAL]: tutorialWith(),
   })
 
@@ -273,7 +323,7 @@ test('does not treat the template nor the tool READMEs as tutorials', () => {
   const files = repositoryWith({
     'README.md': '# Como instalar XYZ',
     'tutoriais/TEMPLATE.md': '# Ferramenta no Sistema\n\n```\ncomando\n```\n',
-    'tutoriais/docker/README.md': '# Docker\n\n## Tutoriais\n',
+    'tutoriais/docker/README.md': '# Docker\n\nPlataforma de containers.\n\n## Tutoriais\n',
   })
 
   // When the repository is checked

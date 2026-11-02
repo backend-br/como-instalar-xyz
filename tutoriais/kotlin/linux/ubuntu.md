@@ -1,14 +1,13 @@
 # Kotlin no Ubuntu
 
-Kotlin é uma linguagem de programação que roda na JVM. Este tutorial instala o compilador de linha de comando do Kotlin
-pelo `snap`.
-
 ## Requisitos
 
 - [Java](../../java/linux/ubuntu.md) instalado.
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala o compilador de linha de comando do Kotlin pelo `snap`.
 
 ### 1. Verifique o snap
 

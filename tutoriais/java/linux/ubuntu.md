@@ -1,13 +1,12 @@
 # Java no Ubuntu
 
-Para instalar qualquer versão do Java OpenJDK você pode utilizar o apt. Este tutorial mostra como instalar a versão 8,
-mas você pode substituir o número pela versão que deseja.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala o OpenJDK 8 pelo apt. Para outra versão, troque o número pela versão que deseja.
 
 ### 1. Instale o OpenJDK
 

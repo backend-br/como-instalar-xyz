@@ -63,8 +63,11 @@ Para iniciar o desenvolvimento, você precisará seguir alguns passos:
 Todo tutorial segue o [modelo](tutoriais/TEMPLATE.md). Copie o modelo para `tutoriais/<ferramenta>/<sistema>/` e siga
 estas regras:
 
-- O título é `# <Ferramenta> no <Sistema>`, seguido de uma ou duas frases dizendo o que é a ferramenta e o que o
-  tutorial instala.
+- Toda ferramenta tem um `tutoriais/<ferramenta>/README.md` com `# <Ferramenta>`, uma descrição curta do que ela é e
+  uma seção `## Tutoriais` com a lista de links para cada sistema. A descrição fica só ali e vale para todos os
+  sistemas.
+- O título do tutorial é `# <Ferramenta> no <Sistema>`, e a primeira seção começa logo abaixo dele, sem descrição. O
+  que é específico do sistema, como o gerenciador de pacotes usado, vai na primeira frase de `Instalação`.
 - As seções `##` são exatamente estas, nesta ordem: `Requisitos`, `Instalação`, `Verificação`, `Desinstalação` e
   `Referências`. Apenas `Desinstalação` é opcional.
 - Os passos dentro de `Instalação` podem usar subtítulos `###`. Não use outros títulos `#` além do título, nem `####`.
@@ -72,14 +75,13 @@ estas regras:
 - Em `Requisitos`, escreva "Nenhum." quando não houver requisitos.
 - `Referências` é uma lista de links com nome, como `[Documentação oficial do Docker](https://docs.docker.com/)`, nunca
   URLs soltas.
-- Toda ferramenta com mais de um tutorial tem um `tutoriais/<ferramenta>/README.md` com `# <Ferramenta>`, uma descrição
-  curta e uma seção `## Tutoriais` com a lista de links para cada sistema.
-- O tutorial precisa estar linkado no [README](README.md) ou no `README.md` da ferramenta, com o nome do sistema como
-  texto do link (`[Ubuntu](...)`, `[Arch Linux](...)`, `[Windows](...)`, `[macOS](...)`).
+- O tutorial precisa estar linkado no `README.md` da ferramenta, com o nome do sistema como texto do link
+  (`[Ubuntu](...)`, `[Arch Linux](...)`, `[Windows](...)`, `[macOS](...)`).
+- Links dizem para onde levam: nada de "aqui", "clique aqui" ou "link".
 
-Um check de CI verifica essas regras em todo pull request: os títulos do tutorial, a linguagem dos blocos de código, as
-URLs soltas em `Referências`, os links para arquivos que não existem e os tutoriais sem link. Para rodar o check
-localmente:
+Um check de CI verifica essas regras em todo pull request: os títulos e a abertura do tutorial, o `README.md` de cada
+ferramenta, a linguagem dos blocos de código, as URLs soltas em `Referências`, os links vagos, os links para arquivos
+que não existem e os tutoriais sem link. Para rodar o check localmente:
 
 ```bash
 node .github/scripts/tutorial-check/index.mjs

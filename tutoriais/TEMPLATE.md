@@ -1,11 +1,10 @@
 <!--
 Modelo de tutorial. Copie este arquivo para tutoriais/<ferramenta>/<sistema>/<distribuição>.md,
 troque os textos de exemplo e apague este comentário. As regras estão no CONTRIBUTING.md.
+A descrição da ferramenta fica em tutoriais/<ferramenta>/README.md, não aqui.
 -->
 
 # Ferramenta no Sistema
-
-Uma ou duas frases dizendo o que é a ferramenta e o que este tutorial instala.
 
 ## Requisitos
 
@@ -15,6 +14,8 @@ Uma ou duas frases dizendo o que é a ferramenta e o que este tutorial instala.
 Quando não houver requisitos, escreva apenas "Nenhum.".
 
 ## Instalação
+
+Uma frase sobre o que é específico deste sistema, como o gerenciador de pacotes usado.
 
 ### 1. Primeiro passo
 

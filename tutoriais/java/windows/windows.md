@@ -1,13 +1,12 @@
 # Java no Windows
 
-A instalação do JDK no Windows é bem simples. Este tutorial mostra os passos necessários para instalar o JDK 11 e
-configurar a variável de ambiente `JAVA_HOME`.
-
 ## Requisitos
 
 Nenhum.
 
 ## Instalação
+
+Este tutorial instala o JDK 11 e configura a variável de ambiente `JAVA_HOME`.
 
 ### 1. Baixe e execute o instalador
 

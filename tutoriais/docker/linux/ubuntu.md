@@ -1,13 +1,12 @@
 # Docker no Ubuntu
 
-O Docker cria e executa aplicações em containers. Este tutorial instala o Docker pelo repositório oficial e, como
-complemento, o docker-compose.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala o Docker pelo repositório oficial e, como complemento, o docker-compose.
 
 ### 1. Remova versões antigas
 

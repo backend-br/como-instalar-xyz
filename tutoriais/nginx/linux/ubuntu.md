@@ -1,14 +1,13 @@
 # Nginx no Ubuntu
 
-O _Nginx_ ("engine X") é muito mais que um servidor _HTTP_: ele também é um _proxy_ reverso, além de servir como _proxy_
-para os serviços _POP_ e _IMAP_. Este tutorial instala o Nginx pelo pacote oficial da distribuição, para fins de estudo.
-
 ## Requisitos
 
 - Uma máquina Ubuntu com acesso à Internet.
 - Um usuário local que possa se tornar `root`.
 
 ## Instalação
+
+Este tutorial instala o Nginx pelo pacote oficial da distribuição, para fins de estudo.
 
 ### 1. Instale o Nginx
 

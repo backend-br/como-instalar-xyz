@@ -1,14 +1,14 @@
 # Visual Studio Code no Ubuntu
 
-O Visual Studio Code (VS Code) é um editor de código feito pela Microsoft. Este tutorial instala o VS Code pelo pacote
-`.deb` ou pelo repositório da Microsoft, que entrega as atualizações pelo apt.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 - `curl` instalado, para a instalação via terminal.
 
 ## Instalação
+
+Este tutorial instala o VS Code pelo pacote `.deb` ou pelo repositório da Microsoft, que entrega as atualizações pelo
+apt.
 
 Escolha uma das duas opções abaixo.
 

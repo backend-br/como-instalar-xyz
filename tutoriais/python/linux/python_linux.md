@@ -1,13 +1,12 @@
 # Python no Linux
 
-Python é uma linguagem de programação de uso geral. Este tutorial instala o Python 3 com o gerenciador de pacotes da sua
-distribuição Linux.
-
 ## Requisitos
 
 - Um usuário com permissão para usar `sudo`.
 
 ## Instalação
+
+Este tutorial instala o Python 3 com o gerenciador de pacotes da sua distribuição Linux.
 
 ### 1. Verifique se o Python já está instalado
 
