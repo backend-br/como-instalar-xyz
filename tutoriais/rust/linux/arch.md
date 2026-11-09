@@ -40,5 +40,5 @@ A saída deve mostrar as versões instaladas do compilador e do cargo.
 
 ## Referências
 
-- [Instalação do Rust (site oficial)](https://www.rust-lang.org/pt-BR/tools/install)
+- [Instalação do Rust (site oficial)](https://rust-lang.org/pt-BR/tools/install/)
 - [rustup](https://rustup.rs/)

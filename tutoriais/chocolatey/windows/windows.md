@@ -23,7 +23,7 @@ qualquer script da internet que você não conheça é seguro. A equipe do Choco
 [leia mais sobre os protocolos de segurança deles](https://chocolatey.org/security).
 
 No PowerShell, tenha certeza de que a
-[política de execução](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)
+[política de execução](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.6)
 não está restrita. A sugestão é usar `Bypass` para desviar das políticas de segurança ou `AllSigned` para mais
 segurança.
 
@@ -62,6 +62,6 @@ Para instalar algum pacote, pesquise no [catálogo de pacotes do Chocolatey](htt
 
 ## Referências
 
-- [Instalação do Chocolatey (site oficial, em inglês)](https://chocolatey.org/docs/installation)
-- [Instalação em modo não administrador (site oficial, em inglês)](https://chocolatey.org/docs/installation#non-administrative-install)
+- [Instalação do Chocolatey (site oficial, em inglês)](https://docs.chocolatey.org/docs/installation/)
+- [Instalação em modo não administrador (site oficial, em inglês)](https://docs.chocolatey.org/docs/installation/#non-administrative-install)
 - [Pacotes do Chocolatey](https://community.chocolatey.org/packages)

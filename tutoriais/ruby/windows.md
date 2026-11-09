@@ -5,7 +5,7 @@
 Para a opção 1 (RubyInstaller), nenhum. Para a opção 2 (Scoop):
 
 - [PowerShell 3](https://www.microsoft.com/en-us/download/details.aspx?id=34595).
-- [.NET Framework 4.5](https://dotnet.microsoft.com/download).
+- [.NET Framework 4.5](https://dotnet.microsoft.com/en-us/download).
 
 ## Instalação
 

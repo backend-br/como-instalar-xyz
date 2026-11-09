@@ -77,4 +77,4 @@ mongod --version
 
 ## Referências
 
-- [Instalação do MongoDB no Ubuntu (documentação oficial, em inglês)](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
+- [Instalação do MongoDB no Ubuntu (documentação oficial, em inglês)](https://www.mongodb.com/docs/manual/administration/install-community-linux/?linux-distro=ubuntu&linux-method=pkg)
