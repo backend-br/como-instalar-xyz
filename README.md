@@ -23,15 +23,16 @@ Repositório com vários tutoriais para instalar várias coisas em vários siste
 
 ### Linguagens
 
-| Nome   | Linux                                           | macOS                            | Windows                                      |
-|--------|-------------------------------------------------|----------------------------------|----------------------------------------------|
-| R      | [Ubuntu](tutoriais/R/linux/ubuntu.md)           |                                  |                                              |
-| PHP    | [Ubuntu](tutoriais/php/linux/ubuntu.md)         |                                  |                                              |
-| Ruby   | [Linux](tutoriais/ruby/linux.md)                | [macOS](tutoriais/ruby/macos.md) | [Windows](tutoriais/ruby/windows.md)         |
-| Rust   | [Arch Linux, Debian](tutoriais/rust/README.md)  |                                  |                                              |
-| Java   | [Ubuntu](tutoriais/java/linux/ubuntu.md)        |                                  | [Windows](tutoriais/java/windows/windows.md) |
-| Kotlin | [Ubuntu](tutoriais/kotlin/linux/ubuntu.md)      |                                  |                                              |
-| Python | [Linux](tutoriais/python/linux/python_linux.md) |                                  |                                              |
+| Nome    | Linux                                             | macOS                            | Windows                                      |
+|---------|---------------------------------------------------|----------------------------------|----------------------------------------------|
+| R       | [Ubuntu](tutoriais/R/linux/ubuntu.md)             |                                  |                                              |
+| PHP     | [Ubuntu](tutoriais/php/linux/ubuntu.md)           |                                  |                                              |
+| Ruby    | [Linux](tutoriais/ruby/linux.md)                  | [macOS](tutoriais/ruby/macos.md) | [Windows](tutoriais/ruby/windows.md)         |
+| Rust    | [Arch Linux, Debian](tutoriais/rust/README.md)    |                                  |                                              |
+| Java    | [Ubuntu](tutoriais/java/linux/ubuntu.md)          |                                  | [Windows](tutoriais/java/windows/windows.md) |
+| Kotlin  | [Ubuntu](tutoriais/kotlin/linux/ubuntu.md)        |                                  |                                              |
+| Python  | [Linux](tutoriais/python/linux/python_linux.md)   |                                  |                                              |
+| Node.js | [Arch Linux](tutoriais/nodejs/linux/archlinux.md) |                                  |                                              |
 
 <div id='databases'></div>
 
